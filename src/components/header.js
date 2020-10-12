@@ -4,7 +4,7 @@ export default () =>(
     <header className="header">
     <div className="header__inner"> 
         <a className="icon">
-            <img src="../images/icon.png"></img>
+            <img src="../images/name.png"></img>
         </a>
         <button className="mobile-menu__btn">
             <span></span>

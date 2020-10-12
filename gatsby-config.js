@@ -22,7 +22,7 @@ module.exports = {
         start_url:`/`,
         background_color:'#ffffff',
         display:`standalone`,
-        icon:`static/images/favicon.png`
+        icon:`static/images/icon.png`
       },
     },
     `gatsby-plugin-offline`,

@@ -4,7 +4,7 @@ export default ()=>(
     <footer className="footer">
     <div className="footer__inner">
         <button className="icon">
-        <img src="../images/icon.png"></img>
+        <img src="../images/name.png"></img>
         </button>
         <ul>
             <li className="map-btn">
