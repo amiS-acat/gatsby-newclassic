@@ -10,7 +10,7 @@ module.exports = {
     title:`newclassic`,
     lang:`ja`,
     description:`新しいクラシックの聞き方を提供するサイト`,
-    siteUrl:"",
+    // siteUrl:"",
   },
   plugins: [
     `gatsby-plugin-sass`,
