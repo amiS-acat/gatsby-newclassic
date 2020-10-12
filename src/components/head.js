@@ -10,7 +10,7 @@ export default ({pagetitle,pagedesc,pagepath}) => {
                     title
                     lang
                     description
-                    
+                    siteUrl
                 }
             }
         }

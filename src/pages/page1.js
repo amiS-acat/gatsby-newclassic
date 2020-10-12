@@ -10,7 +10,7 @@ export default ({location}) => (
     <Layout>
       <Head 
         pagetitle="playlist 1"
-        // pagepath={location.pathname}
+        pagepath={location.pathname}
       />
       <div className="top">
       </div>

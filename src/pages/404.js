@@ -7,7 +7,7 @@ export default ({ location }) => (
     <div>
         <Head 
             pagetitle="ページが見つかりません"
-            // pagepath={location.pathname}
+            pagepath={location.pathname}
         />
         <Layout>
             <p style={{ padding: "33vh 0 0 0", textAlign: "center", fontSize: "17px" }}>
