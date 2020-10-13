@@ -46,6 +46,15 @@ ul{ padding:0;
     &__inner{
         @extend .content-width;
         padding:30px 0;}}
+.postlink{
+    width: 87%;
+    margin: 6px auto;
+    &__ul{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .top{padding-top:$headerHeight;}
 .container{
     position: relative;

@@ -18,7 +18,7 @@ export default () => (
               Hello world
               <ul>
                 <li><Link to={`/`}>Top</Link></li>
-                <li><Link to={`/page1/`}>Page1</Link></li>
+                <li><Link to={`blogpost-template`}>blog</Link></li>
               </ul>
             </div>
           </div>

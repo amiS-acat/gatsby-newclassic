@@ -1,10 +1,11 @@
 import React from "react"
-
+import { Link } from "gatsby"
+ 
 export default () =>(
     <header className="header">
-    <div className="header__inner"> 
+    <div className="header__inner">
         <a className="icon">
-            <img src="../images/name.png"></img>
+            <Link to={`/`}><img src="../images/name.png" /></Link>
         </a>
         <button className="mobile-menu__btn">
             <span></span>
