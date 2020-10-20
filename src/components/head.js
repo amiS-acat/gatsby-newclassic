@@ -20,9 +20,9 @@ export default ({pagetitle,pagedesc,pagepath}) => {
         ?`${pagetitle} | ${siteMetadata.title}`
         :siteMetadata.title
     const description = pagedesc || siteMetadata.description
-    // const url = pagepath
-    //   ?`${siteMetadata.siteUrl}${pagepath}`
-    //   :siteMetadata.siteUrl
+    const url = pagepath
+      ?`${siteMetadata.siteUrl}${pagepath}`
+      :siteMetadata.siteUrl
 
     return (
         <Helmet>
@@ -32,7 +32,6 @@ export default ({pagetitle,pagedesc,pagepath}) => {
                 name='description'
                 content={description}
             />
-            {/* <link rel="canonical" href={url} /> */}
         </Helmet>
     )
 }
