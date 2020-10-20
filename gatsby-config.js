@@ -28,6 +28,34 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins:[`gatsby-remark-responsive-iframe`],
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+            },
+          },
+        ],
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [],
+      },
+    },
+    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`images`,
+        path:`${__dirname}/src/images/`,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -35,12 +63,6 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [`gatsby-remark-responsive-iframe`],
-    //   },
-    // },
   ],
 }
 
