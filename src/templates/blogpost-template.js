@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
@@ -24,7 +24,7 @@ export default ({ location, data, pageContext }) => (
           <div className="main">
             <div className="main__inner">
               <h2 class="playlist__text">{data.contentfulBlogPost.title}</h2>
-              <div className="movie" dangerouslySetInnerHTML={{__html: data.contentfulBlogPost.markdownContent.childMarkdownRemark.html}} />
+              <div dangerouslySetInnerHTML={{__html: data.contentfulBlogPost.markdownContent.childMarkdownRemark.html}} />
               <div class="main__contents">{documentToReactComponents(data.contentfulBlogPost.contents.json)}</div>
             </div>
           </div>
