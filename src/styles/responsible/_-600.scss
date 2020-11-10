@@ -1,0 +1,9 @@
+.main {
+  & .iframe__outer {
+    width: 90%;
+    height: 275px;
+  }
+  & .iframe__under {
+    padding-top: 275px;
+  }
+}

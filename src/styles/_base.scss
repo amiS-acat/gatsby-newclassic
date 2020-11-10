@@ -1,0 +1,60 @@
+body,
+span,
+p,
+h3 {
+  margin: 0;
+}
+button,
+a {
+  background-color: unset;
+  border: none;
+  outline: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: $cIconButtonA;
+  &:hover {
+    color: $cBlack;
+  }
+}
+img {
+  max-width: 100%;
+  // align-self:flex-start;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+// li{ margin:auto 5px;}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  min-width: $minWidth;
+}
+.icon {
+  margin: auto 0;
+  & .gatsby-image-wrapper {
+    & picture {
+      & img {
+        position: relative !important;
+      }
+    }
+  }
+}
+.footer {
+  width: 100%;
+  background-color: $cBack;
+  &__inner {
+    @extend .content-width;
+    padding: 30px 0;
+  }
+}
+
+// .postlink {
+//   width: 87%;
+//   margin: 6px auto;
+//   &__ul {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
