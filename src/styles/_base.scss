@@ -47,14 +47,16 @@ ul {
   &__inner {
     @extend .content-width;
     padding: 30px 0;
+    & ul {
+      padding-left: 10px;
+      & li {
+        & a {
+          color: $cIconButtonA;
+          &:hover {
+            color: $cBlack;
+          }
+        }
+      }
+    }
   }
 }
-
-// .postlink {
-//   width: 87%;
-//   margin: 6px auto;
-//   &__ul {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-// }

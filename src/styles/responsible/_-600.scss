@@ -1,6 +1,15 @@
+.carousel-inner {
+  margin: 30px 0;
+}
+.carousel-control-next,.carousel-control-prev{
+  display: none !important;
+  }
 .main {
-  & .iframe__outer {
+  &__inner{
     width: 90%;
+  }
+  & .iframe__outer {
+    width: 80%;
     height: 275px;
   }
   & .iframe__under {

@@ -1,7 +1,7 @@
 .maincontainer {
   background-color: $cWhite;
   &__inner {
-    padding: 100px 0;
+    padding-bottom: 100px;
     @extend .content-width;
   }
 }
@@ -12,6 +12,11 @@
   margin: 0 auto 0 auto;
   &__inner {
     margin: 0 auto;
+    & h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
     & .video {
       position: absolute;
       left: 0;
@@ -26,5 +31,17 @@
         }
       }
     }
+  }
+}
+.video__descript {
+  margin: 40px 0 80px 0;
+}
+.index {
+  margin-top: 33px;
+  &__alph {
+    font-weight: bold;
+  }
+  &__ja {
+    margin: 0;
   }
 }
