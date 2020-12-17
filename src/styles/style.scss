@@ -1,7 +1,6 @@
 @import "variables";
 @import "header";
 @import "base";
-@import "main";
 
 @media screen and(max-width:600px) {
   @import "responsible/-600";
@@ -13,14 +12,75 @@
   @import "responsible/1070-";
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-  background-color: black !important;
-  opacity: 0.8 !important;
-  &:hover {
-    opacity: 1 !important;
-  }
+body{
+  font-size: 16px;
 }
-.carousel-indicators {
-  display: none !important;
+
+.display-none{
+  display: none;
+}
+
+.header_under{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  width: 100%;
+}
+
+.main_backgroundImg {
+  background-color: $cBlack;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 48rem;
+}
+
+.main_container {
+  position: relative;
+  margin: auto;
+  width: 160px;
+  height: 100%;
+}
+
+.spin-btn{
+  position: absolute !important;
+  top: 28%;
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.spine-btn-hover-opacity{
+  transform: rotate(360deg);
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 0;
+}
+
+.spin-btn-hover{
+  transform: rotate(360deg);
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.green-btn{
+  z-index: 2;
+}
+
+.ballone{
+  background-color: white;
+  opacity: 0.9;
+  border: 2px solid black;
+  border-radius: 1px;
+  margin: auto;
+  margin-top: -415px;
+  margin-bottom: 251px;
+  max-width: 600px;
+  width: 90%;
+  height: 160px;
+}
+
+.next{
+  float: right;
+  font-size: 20px;
 }

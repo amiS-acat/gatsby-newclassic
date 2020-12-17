@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: $headerHeight;
-  background-color: $cWhite;
+  background-color: rgba(252,252,252,0.4);
   border-bottom: solid $cBlack;
   z-index: 100;
   &__inner {

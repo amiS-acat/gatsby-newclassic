@@ -45,16 +45,13 @@ const Header = () => {
       >
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="">1</a>
           </li>
           <li>
-            <a href="">about us!</a>
+            <a href="">2</a>
           </li>
           <li>
-            <a href="">column</a>
-          </li>
-          <li>
-            <a href="mailto:newclassic.ja&#64;gmail.com">contact</a>
+            <a href="">3</a>
           </li>
         </ul>
       </nav>

@@ -1,20 +1,13 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  // siteMetadata: {
-  //   title: `newclassic`,
-  //   lang: `ja`,
-  //   description: `新しいクラシックの聞き方を提供するサイト`,
-  //   siteUrl: "https://amis-acat-newclassic.netlify.app",
-  // },
+  siteMetadata: {
+    title: `newclassic`,
+    lang: `ja`,
+    description: ``,
+    // siteUrl: "https://amis-acat-newclassic.netlify.app",
+  },
   plugins: [
     `gatsby-plugin-sass`,
-    // `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-image`,
     `gatsby-transformer-sharp` , `gatsby-plugin-sharp`,
     {
@@ -47,17 +40,5 @@ module.exports = {
     //     plugins: [],
     //   },
     // },
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
-    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    //     host: process.env.CONTENTFUL_HOST,
-    //   },
-    // },
   ],
 }
-
-
-
-//CONTENTFUL_SPACE_ID=ef6v7qy1egqz CONTENTFUL_ACCESS_TOKEN=LnNGEHhC6YxqcQ8NHiHFJlApcpRaiCzRoyGr-3QhKGo CONTENTFUL_HOST=cdn.contentful.com gatsby develop -H 0.0.0.0
