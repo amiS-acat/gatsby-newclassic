@@ -1,26 +1,9 @@
 @import "variables";
 @import "header";
 @import "base";
+@import "sp";
 
-@media screen and(max-width:600px) {
-  @import "responsible/-600";
-}
-@media screen and(min-width:601px) {
-  @import "responsible/601-";
-}
-@media screen and(min-width:1070px) {
-  @import "responsible/1070-";
-}
-
-body{
-  font-size: 16px;
-}
-
-.display-none{
-  display: none;
-}
-
-.header_under{
+.header-under {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +11,7 @@ body{
   width: 100%;
 }
 
-.main_backgroundImg {
+.main_bg {
   background-color: $cBlack;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,51 +19,82 @@ body{
   height: 48rem;
 }
 
-.main_container {
+.main_bg-container {
   position: relative;
   margin: auto;
   width: 160px;
   height: 100%;
+  z-index: 10;
 }
 
-.spin-btn{
+.spin-btn {
   position: absolute !important;
-  top: 28%;
+  top: 32.4%;
   transform: rotate(0deg);
   transition: 0.3s;
 }
 
-.spine-btn-hover-opacity{
+.spine-btn-hover-none {
+  opacity: 0;
   transform: rotate(360deg);
   transition: 0.3s;
-  opacity: 0;
-  z-index: 0;
 }
 
-.spin-btn-hover{
+.spin-btn-hover {
   transform: rotate(360deg);
   transition: 0.3s;
+}
+
+.green-btn {
   z-index: 1;
 }
 
-.green-btn{
-  z-index: 2;
+.main_text-container {
+  max-width: 1000px;
+  height: 46rem;
+  margin: 0 auto;
+  margin-top: -768px;
 }
 
-.ballone{
-  background-color: white;
-  opacity: 0.9;
+.main_text {
+  font-size: 86px;
+  font-weight: bold;
+  color: $cWhite;
+  text-shadow: 1px 0 5px black, 0 1px 5px black, -1px 0 5px black,
+    0 -1px 5px black;
+  margin: 33px 3px 0 3px;
+  transform: translateX(0px);
+  transition: 0.3s;
+}
+
+.main_text-none {
+  opacity: 0;
+  font-size: 86px;
+  font-weight: bold;
+  color: $cWhite;
+  text-shadow: 1px 0 5px black, 0 1px 5px black, -1px 0 5px black,
+    0 -1px 5px black;
+  margin: 33px 3px 0 3px;
+  transform: translateX(1000px);
+  transition: 0.3s;
+}
+
+.pageNation-container {
+  background-color: rgba(252, 252, 252, 0.7);
   border: 2px solid black;
-  border-radius: 1px;
-  margin: auto;
-  margin-top: -415px;
-  margin-bottom: 251px;
-  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 127px;
   width: 90%;
-  height: 160px;
+  height: 31px;
+  padding: 7px 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.next{
+.prev {
+  float: left;
+}
+
+.next {
   float: right;
-  font-size: 20px;
 }

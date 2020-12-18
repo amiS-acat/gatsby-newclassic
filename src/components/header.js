@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Header = () => {
-  const [click, setClick] = useState(false)
+  const [mobileClick, setMobileClick] = useState(false)
 
   const data = useStaticQuery(graphql`
   query{
@@ -22,14 +22,14 @@ const Header = () => {
 
   return (
     <>
-      <header className={click ? "header-open" : "header"}>
+      <header className={mobileClick ? "header-open" : "header"}>
         <div className="header__inner">
-          {click ?
+          {mobileClick ?
             <div className="icon"><Img fixed={data.file.childImageSharp.fixed} alt="" /></div>
             : <Link to={`/`} className="icon"><Img fixed={data.file.childImageSharp.fixed} alt="" /></Link>
           }
           <button
-            onClick={() => setClick(prevState => !prevState)}
+            onClick={() => setMobileClick(prevState => !prevState)}
           >
             <span></span>
             <span></span>
@@ -40,18 +40,18 @@ const Header = () => {
       <div className="header__under">
       </div>
       <nav
-        className={click ? "mobile-menu-open" : "mobile-menu"}
-        onClick={() => setClick(prevState => !prevState)}
+        className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
+        onClick={() => setMobileClick(prevState => !prevState)}
       >
         <ul>
           <li>
-            <a href="">1</a>
+            <Link to="/">1</Link>
           </li>
           <li>
-            <a href="">2</a>
+            <Link to="/page2">2</Link>
           </li>
           <li>
-            <a href="">3</a>
+            <Link to="/page3">3</Link>
           </li>
         </ul>
       </nav>

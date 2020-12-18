@@ -6015,6 +6015,15 @@ gatsby-link@^2.4.16:
     "@types/reach__router" "^1.3.6"
     prop-types "^15.7.2"
 
+gatsby-node-helpers@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-node-helpers/-/gatsby-node-helpers-0.3.0.tgz#3bdca3b7902a702a5834fef280ad66d51099d57c"
+  integrity sha1-O9yjt5AqcCpYNP7ygK1m1RCZ1Xw=
+  dependencies:
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.4"
+    p-is-promise "^1.1.0"
+
 gatsby-page-utils@^0.2.30:
   version "0.2.30"
   resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.2.30.tgz#2ec4b51a64040cd5e67f409f962d29a6b7df4ed4"
@@ -6173,6 +6182,15 @@ gatsby-recipes@^0.2.38:
     ws "^7.3.0"
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
+
+gatsby-source-buzzsprout@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-buzzsprout/-/gatsby-source-buzzsprout-0.3.1.tgz#02fbea5861a41f9f2088517787a6832704aaefd3"
+  integrity sha512-JqtE9HbAAEaeyTpJMcJElaF3Dj+AgK2wppLDQyvMmvH9IL/jFvDmH4UhJBOYt+RHMCORv6j6Wo92kBk5hEE7iA==
+  dependencies:
+    "@babel/runtime" "^7.8.4"
+    gatsby-node-helpers "^0.3.0"
+    node-fetch "^2.6.0"
 
 gatsby-source-filesystem@^2.4.2:
   version "2.4.2"
@@ -9065,7 +9083,7 @@ node-eta@^0.9.0:
   resolved "https://registry.yarnpkg.com/node-eta/-/node-eta-0.9.0.tgz#9fb0b099bcd2a021940e603c64254dc003d9a7a8"
   integrity sha1-n7CwmbzSoCGUDmA8ZCVNwAPZp6g=
 
-node-fetch@2.6.1, node-fetch@^2.5.0, node-fetch@^2.6.1:
+node-fetch@2.6.1, node-fetch@^2.5.0, node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
