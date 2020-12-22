@@ -1,16 +1,49 @@
 import React from "react";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout";
-import Page from "../components/page1";
+import Header from "../components/org/header";
+import Footer from "../components/org/footer";
 
-const Main = () => {
+import SEO from "../components/seo";
+
+const Index = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <>
-      <Layout>
-        <Page />
-      </Layout>
+      <Header />
+      <SEO />
+      {posts.map(({ node }) => (
+        <Link to={node.frontmatter.slug}>
+          <h2>{node.frontmatter.title}</h2>
+          <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
+        </Link>
+      ))}
+      <Footer />
     </>
   );
 };
+export default Index;
 
-export default Main;
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            image {
+              childImageSharp {
+                fixed(width: 100) {
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

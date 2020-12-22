@@ -1,7 +1,6 @@
-body{
+body {
   font-size: 16px;
 }
-
 body,
 span,
 p,
@@ -30,6 +29,36 @@ ul {
   max-width: $maxWidth;
   min-width: $minWidth;
 }
+
+.text-align-center {
+  text-align: center;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.display-flex{
+  display: flex;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.display-flex-block {
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .display-flex-block {
+    display: block;
+  }
+}
+
+.sircle{
+  border-radius: 50%;
+}
+
 .icon {
   margin: auto 0;
   & .gatsby-image-wrapper {
