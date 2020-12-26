@@ -8,6 +8,7 @@ import Header from "./components/header";
 import Footer from "../org/footer";
 
 const Index = () => {
+  require("../../styles/_symple.scss");
   return (
     <>
       <Header />

@@ -3,11 +3,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
 const Index = () => {
-  const [click1, setClick1] = useState(false);
-  const [click2, setClick2] = useState(false);
-  const [click3, setClick3] = useState(false);
-  const [click4, setClick4] = useState(false);
-  const [click5, setClick5] = useState(false);
+  const [click1, setClick1] = useState(true);
+  const [click2, setClick2] = useState(true);
+  const [click3, setClick3] = useState(true);
+  const [click4, setClick4] = useState(true);
+  const [click5, setClick5] = useState(true);
   
   const data = useStaticQuery(graphql`
     {

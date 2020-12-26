@@ -1,16 +1,15 @@
-// import React from "react";
+import React from "react";
 
-// import Layout from "../components/layout";
-// import Page from "../components/page2";
+import SEO from "../components/seo";
+import Page from "../components/cube/page";
 
-// const Main = () => {
-//   return (
-//     <>
-//       <Layout>
-//         <Page />
-//       </Layout>
-//     </>
-//   );
-// };
+const Main = () => {
+  return (
+    <div className="cube">
+      <SEO />
+      <Page />
+    </div>
+  );
+};
 
-// export default Main;
+export default Main;

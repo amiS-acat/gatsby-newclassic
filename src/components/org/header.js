@@ -10,10 +10,7 @@ const Header = () => {
       file(relativePath: {eq: "images/name.png"}) {
         childImageSharp {
           fixed(width: 175) {
-            src
-            srcSet
-            srcSetWebp
-            srcWebp
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }

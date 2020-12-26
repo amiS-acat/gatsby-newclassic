@@ -1,18 +1,4 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: $headerHeight;
-  background-color: rgba(252,252,252,0.4);
-  border-bottom: solid $cBlack;
-  z-index: 100;
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    @extend .content-width;
-  }
+header {
   & button {
     & > span {
       background-color: $cBlack;
@@ -22,6 +8,23 @@
       margin-bottom: 9px;
       transition: transform 0.7s;
     }
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $headerHeight;
+  background-color: rgba(252, 252, 252, 0.4);
+  border-bottom: solid $cBlack;
+  z-index: 100;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    @extend .content-width;
   }
   &__under {
     height: $headerHeight;

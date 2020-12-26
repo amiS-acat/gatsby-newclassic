@@ -1,0 +1,87 @@
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+
+body {
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: $cBlack;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+header {
+  height: 382px;
+  button {
+    position: absolute;
+    z-index: 10;
+    right: 31px;
+    top: 35px;
+    span {
+      background-color: $cWhite;
+    }
+  }
+}
+
+.top-img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-image: radial-gradient(
+      circle,
+      rgba(150, 147, 179, 0.2) 57%,
+      rgba(173, 185, 200, 0.199317) 76%
+    ),
+    url("../../content/images/mirror.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 382px;
+  float: right;
+  border-radius: 0px 0px 0px 47px / 0px 0px 0px 70px;
+}
+
+.lists {
+  float: left;
+  margin: 2rem 0 0 3%;
+  line-height: 3rem;
+}
+
+.list-title {
+  text-align: center;
+  background-color: $cBlack;
+  border-radius: 10px;
+  font-size: 57px;
+  color: $cWhite;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.top__text {
+  position: relative;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.text-small {
+  position: absolute;
+  right: 4px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.BlackBox{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
+    margin: 100px 0;
+}
