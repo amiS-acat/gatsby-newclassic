@@ -30,7 +30,7 @@ ul {
   min-width: $minWidth;
 }
 
-.pc-display-none{
+.pc-display-none {
   display: none;
 }
 
@@ -38,15 +38,19 @@ ul {
   text-align: center;
 }
 
-.position-relative{
+.position-relative {
   position: relative;
 }
 
-.display-flex{
+.display-flex {
   display: flex;
 }
 
-.flex-1{
+.display-flex-block{
+  display: flex;
+}
+
+.flex-1 {
   flex: 1;
 }
 
@@ -54,17 +58,26 @@ ul {
   display: flex;
 }
 @media screen and (max-width: 600px) {
-  .pc-display-none{
+  .sp-display-none {
+    display: none;
+  }
+
+  .pc-display-none {
     display: inline-block;
   }
-  
+
   .display-flex-block {
     display: block;
   }
 }
 
-.sircle{
+.sircle {
   border-radius: 50%;
+}
+
+.player {
+  z-index: 10;
+  cursor: pointer;
 }
 
 .icon {

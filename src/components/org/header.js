@@ -7,7 +7,7 @@ const Header = () => {
 
   const data = useStaticQuery(graphql`
   query{
-      file(relativePath: {eq: "images/name.png"}) {
+      file(relativePath: {eq: "images/logo/name.png"}) {
         childImageSharp {
           fixed(width: 175) {
             ...GatsbyImageSharpFixed_withWebp_noBase64

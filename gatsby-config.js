@@ -27,6 +27,7 @@ module.exports = {
         podcastId: '123456',
       },
     },
+    `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   option: {

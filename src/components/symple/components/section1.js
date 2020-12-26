@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "images/debussy.jpg" }) {
+      file(relativePath: { eq: "images/photo/debussy.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -15,7 +15,7 @@ const Index = () => {
     }
   `);
   return (
-    <>
+    <section>
       <Img className="top-img" fluid={data.file.childImageSharp.fluid} />
       <div className="content-width">
         <section>
@@ -32,7 +32,7 @@ const Index = () => {
           </div>
         </section>
       </div>
-    </>
+    </section>
   );
 };
 

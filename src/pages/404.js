@@ -35,7 +35,7 @@ const notFound = ({ data }) => {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "images/cup.png" }) {
+    file(relativePath: { eq: "images/icon/cup.png" }) {
       childImageSharp {
         fixed(width: 70) {
           ...GatsbyImageSharpFixed_withWebp_noBase64

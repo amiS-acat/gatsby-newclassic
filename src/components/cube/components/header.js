@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const Header = () => {
   const [mobileClick, setMobileClick] = useState(false);
@@ -12,32 +13,30 @@ const Header = () => {
           <span></span>
           <span></span>
         </button>
-        <div className="top-img">
-          {/* <Img fluid={data.mirror.childImageSharp.fluid} /> */}
-        </div>
-        <ul className="lists">
-          <div className="list-title">鏡</div>
+        <div className="top-img"></div>
+        <div className="list-top">鏡</div>
+        <ul className="lists sp-display-none">
           <li>
-            <a>蛾</a>
+            <a onClick={() => scrollTo("")}>蛾</a>
           </li>
           <li>
-            <a>悲しげな鳥たち</a>
+            <a onClick={() => scrollTo("")}>悲しげな鳥たち</a>
           </li>
           <li>
-            <a>海原の小舟</a>
+            <a onClick={() => scrollTo("")}>海原の小舟</a>
           </li>
           <li>
-            <a>道化師の朝の歌</a>
+            <a onClick={() => scrollTo("")}>道化師の朝の歌</a>
           </li>
           <li>
-            <a>鐘の谷</a>
+            <a onClick={() => scrollTo("")}>鐘の谷</a>
           </li>
         </ul>
       </header>
-      <div className="content-width">
-        <div className="top__text">
-          Ravel Maurice<br className="pc-display-none"/>　『 Miroirs 』<div className="text-small">モーリスラヴェル　組曲『鏡』</div>
-        </div>
+      <div className="top__text">
+        Ravel Maurice
+        <br className="pc-display-none" />　『 Miroirs 』
+        <div className="text-small">モーリス ラヴェル　組曲『鏡』</div>
       </div>
       <nav
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}

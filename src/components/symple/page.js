@@ -13,8 +13,10 @@ const Index = () => {
     <>
       <Header />
       <Section1 />
+      <div className="content-width">
       <Section2 />
       <Section3 />
+      </div>
       <Footer />
     </>
   );
