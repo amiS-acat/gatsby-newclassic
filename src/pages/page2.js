@@ -6,7 +6,7 @@ import Page from "../components/cube/page";
 const Main = () => {
   return (
     <>
-      <SEO />
+      <SEO pagetitle="ravel"/>
       <Page />
     </>
   );

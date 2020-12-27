@@ -4,6 +4,7 @@ module.exports = {
     lang: `ja`,
     description: ``,
     siteUrl: "https://amis-acat-newclassic.netlify.app",
+    locale: `ja_JP`,
   },
   plugins: [
     `gatsby-plugin-sass`,

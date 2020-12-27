@@ -1,10 +1,24 @@
 import React, { useState } from "react";
+import Img from "gatsby-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-import InnerLink from "../../innerLink"
+import InnerLink from "../../innerLink";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Header = () => {
   const [mobileClick, setMobileClick] = useState(false);
+
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "images/photo/mirror.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <>
@@ -14,7 +28,9 @@ const Header = () => {
           <span></span>
           <span></span>
         </button>
-        <div className="top-img"></div>
+        <div className="top-img">
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </div>
         <div className="list-top">鏡</div>
         <ul className="lists sp-display-none">
           <li>

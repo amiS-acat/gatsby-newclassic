@@ -6,7 +6,7 @@ import Page from "../components/symple/page";
 const Main = () => {
   return (
     <>
-      <SEO />
+      <SEO pagetitle="debussy"/>
       <Page />
     </>
   );

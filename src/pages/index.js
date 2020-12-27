@@ -15,7 +15,7 @@ const Index = ({ data }) => {
       <Header />
       <SEO />
       {posts.map(({ node }) => (
-        <Link to={node.frontmatter.slug}>
+        <Link to={node.frontmatter.slug} key={node.frontmatter.slug}>
           <h2>{node.frontmatter.title}</h2>
         </Link>
       ))}
@@ -27,7 +27,7 @@ export default Index;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___slug, order: ASC }) {
       edges {
         node {
           frontmatter {
