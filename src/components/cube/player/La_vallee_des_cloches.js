@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 
-import music from "../../../music/La_vallée_des_cloches.mp3";
+import music from "../../../music/La_vallee_des_cloches.mp3";
 
 const Pause = ({ stop }) => {
   return <div className="player" onClick={() => stop()}></div>;
