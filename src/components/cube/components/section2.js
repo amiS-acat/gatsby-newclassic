@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Index = () => {
+
   const data = useStaticQuery(graphql`
     {
       ravel: file(relativePath: { eq: "images/photo/ravel.jpg" }) {

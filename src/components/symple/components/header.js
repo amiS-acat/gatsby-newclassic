@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import InnerLink from "../../innerLink";
+
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,17 +28,7 @@ const Header = () => {
             <Img fixed={data.file.childImageSharp.fixed} alt="" />
           </Link>
         </div>
-        <ul>
-          <li>
-            <Link to="/page1">1</Link>
-          </li>
-          <li>
-            <Link to="/page2">2</Link>
-          </li>
-          <li>
-            <Link to="/page3">3</Link>
-          </li>
-        </ul>
+        <InnerLink />
       </div>
     </header>
   );

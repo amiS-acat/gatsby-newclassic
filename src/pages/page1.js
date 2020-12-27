@@ -5,10 +5,10 @@ import Page from "../components/symple/page";
 
 const Main = () => {
   return (
-    <div className="symple">
+    <>
       <SEO />
       <Page />
-    </div>
+    </>
   );
 };
 

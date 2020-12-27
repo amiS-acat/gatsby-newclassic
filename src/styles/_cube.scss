@@ -1,213 +1,222 @@
-@import "./variables";
+@import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
 
-body {
-  font-family: "Kosugi Maru", sans-serif;
-  font-size: 14px;
-}
-
-a {
-  color: $cBlack;
-  &:hover {
-    opacity: 0.3;
+.cube {
+  body {
+    font-family: "Kosugi Maru", sans-serif;
+    font-size: 14px;
+    color: #374354;
   }
-}
 
-header {
-  height: 382px;
-  button {
+  a {
+    color: #374354;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  header {
+    height: 382px;
+    button {
+      position: absolute;
+      z-index: 10;
+      right: 31px;
+      top: 35px;
+      span {
+        background-color: $cWhite;
+      }
+    }
+  }
+
+  .top-img {
     position: absolute;
-    z-index: 10;
-    right: 31px;
-    top: 35px;
-    span {
-      background-color: $cWhite;
-    }
-  }
-}
-
-.top-img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  background-image: radial-gradient(
-      circle,
-      rgba(150, 147, 179, 0.2) 57%,
-      rgba(173, 185, 200, 0.199317) 76%
-    ),
-    url("../../content/images/photo/mirror.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 80%;
-  height: 382px;
-  float: right;
-  border-radius: 0px 0px 0px 47px / 0px 0px 0px 70px;
-}
-
-.lists {
-  float: left;
-  margin: 0 3%;
-  line-height: 55px;
-}
-
-.list-top {
-  text-align: center;
-  background-color: black;
-  border-radius: 10px;
-  font-size: 53px;
-  color: white;
-  width: 49px;
-  height: 52px;
-  margin: 3%;
-}
-
-.top__text {
-  text-align: center;
-  font-size: 29px;
-  font-weight: bold;
-  line-height: 47px;
-  border-bottom: 3px solid black;
-  margin: auto;
-  width: 90%;
-}
-
-.text-small {
-  font-size: 16px;
-}
-
-.Box {
-  margin-top: 100px;
-  display: flex;
-}
-
-.BlackBox {
-  position: relative;
-  background-color: $cBlack;
-  color: $cWhite;
-  border-radius: 10px;
-  width: 140px;
-  height: 140px;
-}
-
-.BlackBox > div,
-.BlackBox > svg {
-  display: block !important;
-  margin: auto;
-  margin-top: 40px;
-}
-
-.BlackBox > svg {
-  margin-top: 50px;
-  font-size: 30px;
-}
-
-.GrayBox {
-  position: absolute;
-  top: -25px;
-  background-color: $cBlack;
-  opacity: 0.1;
-  border-radius: 10px;
-  width: 260px;
-  height: 260px;
-}
-
-section {
-  :nth-child(1),
-  :nth-child(5),
-  :nth-child(9) {
-    .GrayBox {
-      left: 20px;
-    }
-    .Box-text {
-      margin: auto 0 auto 125px;
-    }
-  }
-  :nth-child(3),
-  :nth-child(7) {
-    justify-content: flex-end;
-    .GrayBox {
-      right: 20px;
-    }
-    .Box-text {
-      margin: auto 125px auto 0;
-    }
-  }
-}
-
-.Box-text {
-  font-size: 24px;
-  line-height: 35px;
-  margin: auto;
-}
-
-.text-desc {
-  text-align: center;
-  margin-top: 14px;
-  margin-bottom: 200px;
-  line-height: 22px;
-}
-
-.title-font-size {
-  font-size: 20px;
-}
-
-.border--black {
-  background-color: $cBlack;
-  width: 90%;
-  height: 3px;
-  margin: 0 auto 40px;
-}
-
-.composer {
-  justify-content: space-between;
-  text-align: center;
-  margin: 0 auto;
-  width: 380px;
-}
-
-.composer-text{
-  margin: auto 30px;
-}
-
-.composer-img {
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.player{
-  position: absolute;
-  width: 140px;
-  height: 140px;
-}
-
-@media screen and (max-width: 600px) {
-  .text-small {
-    position: unset;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    background-image: radial-gradient(
+        circle,
+        rgba(150, 147, 179, 0.2) 57%,
+        rgba(173, 185, 200, 0.199317) 76%
+      ),
+      url("../../content/images/photo/mirror.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 382px;
+    float: right;
+    border-radius: 0px 0px 0px 47px / 0px 0px 0px 70px;
   }
 
-  .Box-text {
+  .lists {
+    float: left;
+    margin: 0 3%;
+    line-height: 55px;
+  }
+
+  .list-top {
     text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 53px;
+    color: white;
+    width: 49px;
+    height: 52px;
+    margin: 3%;
+  }
+
+  .top__text {
+    text-align: center;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 47px;
+    margin: auto;
+    width: 90%;
+  }
+
+  .text-small {
+    font-size: 16px;
+  }
+
+  .square {
+    width: 11px;
+    height: 11px;
+    background-color: $cBlack;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  .Box {
+    margin-top: 100px;
+    display: flex;
+  }
+
+  .BlackBox {
+    position: relative;
+    background-color: $cBlack;
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .BlackBox > div,
+  .BlackBox > svg {
+    display: block !important;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .BlackBox > svg {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+
+  .GrayBox {
+    position: absolute;
+    top: -25px;
+    background-color: $cBlack;
+    opacity: 0.1;
+    border-radius: 10px;
+    width: 260px;
+    height: 260px;
   }
 
   section {
     :nth-child(1),
     :nth-child(5),
     :nth-child(9) {
+      .GrayBox {
+        left: 20px;
+      }
       .Box-text {
-        margin: auto;
+        margin: auto 0 auto 125px;
       }
     }
     :nth-child(3),
     :nth-child(7) {
+      justify-content: flex-end;
+      .GrayBox {
+        right: 20px;
+      }
       .Box-text {
-        margin: auto;
+        margin: auto 125px auto 0;
       }
     }
   }
 
+  .Box-text {
+    font-size: 24px;
+    line-height: 35px;
+    margin: auto;
+  }
+
+  .text-desc {
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 200px;
+    line-height: 22px;
+  }
+
+  .title-font-size {
+    font-size: 20px;
+  }
+
+  .border--black {
+    background-color: $cBlack;
+    width: 90%;
+    height: 3px;
+    margin: 0 auto 40px;
+  }
+
   .composer {
-    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 20px;
+    width: 380px;
+  }
+
+  .composer-text {
+    margin: auto 30px;
+  }
+
+  .composer-img {
+    border-radius: 10px;
+  }
+
+  .player {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .text-small {
+      position: unset;
+    }
+
+    .Box-text {
+      text-align: center;
+    }
+
+    section {
+      :nth-child(1),
+      :nth-child(5),
+      :nth-child(9) {
+        .Box-text {
+          margin: auto;
+        }
+      }
+      :nth-child(3),
+      :nth-child(7) {
+        .Box-text {
+          margin: auto;
+        }
+      }
+    }
+
+    .composer {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }

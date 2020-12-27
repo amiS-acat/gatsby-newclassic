@@ -8,17 +8,16 @@ import Header from "./components/header";
 import Footer from "../org/footer";
 
 const Index = () => {
-  require("../../styles/_symple.scss");
   return (
-    <>
+    <div className="symple">
       <Header />
       <Section1 />
       <div className="content-width">
-      <Section2 />
-      <Section3 />
+        <Section2 />
+        <Section3 />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

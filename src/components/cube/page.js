@@ -6,16 +6,15 @@ import Section2 from "./components/section2";
 import Footer from "../org/footer";
 
 const Index = () => {
-  require("../../styles/_cube.scss");
   return (
-    <>
+    <div className="cube">
       <Header />
       <div className="content-width">
         <Section1 />
         <Section2 />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

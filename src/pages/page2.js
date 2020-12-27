@@ -5,10 +5,10 @@ import Page from "../components/cube/page";
 
 const Main = () => {
   return (
-    <div className="cube">
+    <>
       <SEO />
       <Page />
-    </div>
+    </>
   );
 };
 
