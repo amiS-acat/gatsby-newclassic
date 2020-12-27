@@ -9,7 +9,7 @@ const Index = () => {
       ravel: file(relativePath: { eq: "images/photo/ravel.jpg" }) {
         childImageSharp {
           fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+            ...GatsbyImageSharpFixed_withWebp__tracedSVG
           }
         }
       }
