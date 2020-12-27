@@ -10,13 +10,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-image`,
     `gatsby-transformer-sharp` , `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options:{
         path: `${__dirname}/frontmatter`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
