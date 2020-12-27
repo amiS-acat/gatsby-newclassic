@@ -6,7 +6,7 @@ import { faCrow } from "@fortawesome/free-solid-svg-icons";
 
 import Noctuelles from "../player/Noctuellesflac";
 import Oiseaux from "../player/Oiseaux_tristes";
-import Une from "../player/Une_barque_sur_l'océan";
+import Une from "../player/Une_barque_sur_l'ocean";
 import Alborada from "../player/Alborada_del_gracioso";
 import Vallee from "../player/La_vallee_des_cloches";
 
