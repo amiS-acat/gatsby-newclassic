@@ -1,20 +1,31 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 const InnerLink = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              number
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <ul>
-      <li>
-        <Link to="/page1">1</Link>
-      </li>
-      <li>
-        <Link to="/page2">2</Link>
-      </li>
-      <li>
-        <Link to="/page3">3</Link>
-      </li>
+      {posts.map(({ node }) => (
+        <li>
+          <Link to={node.frontmatter.slug}>{node.frontmatter.number}</Link>
+        </li>
+      ))}
     </ul>
   );
 };
-
 export default InnerLink;
