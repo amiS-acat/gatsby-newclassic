@@ -10,7 +10,7 @@ const Header = () => {
       file(relativePath: { eq: "images/logo/name.png" }) {
         childImageSharp {
           fixed(width: 175) {
-            ...GatsbyImageSharpFixed_withWebp__tracedSVG
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

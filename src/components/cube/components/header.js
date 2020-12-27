@@ -13,7 +13,7 @@ const Header = () => {
       file(relativePath: { eq: "images/photo/mirror.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp__tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
