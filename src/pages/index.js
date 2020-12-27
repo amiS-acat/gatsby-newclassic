@@ -17,7 +17,6 @@ const Index = ({ data }) => {
       {posts.map(({ node }) => (
         <Link to={node.frontmatter.slug}>
           <h2>{node.frontmatter.title}</h2>
-          <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
         </Link>
       ))}
       <Footer />
@@ -34,13 +33,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
-            image {
-              childImageSharp {
-                fixed(width: 100) {
-                  ...GatsbyImageSharpFixed_withWebp_noBase64
-                }
-              }
-            }
           }
         }
       }

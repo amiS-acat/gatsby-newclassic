@@ -3,7 +3,7 @@ module.exports = {
     title: `newclassic`,
     lang: `ja`,
     description: ``,
-    // siteUrl: "https://amis-acat-newclassic.netlify.app",
+    siteUrl: "https://amis-acat-newclassic.netlify.app",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -13,20 +13,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options:{
-        name: `posts`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/frontmatter`,
       },
     },
     `gatsby-transformer-remark`,
-    {
-      resolve: 'gatsby-source-buzzsprout',
-      options: {
-        // You will need to generate an access token and get the podcast ID from your account
-        // https://github.com/Buzzsprout/buzzsprout-api#authentication
-        token: '1234567890',
-        podcastId: '123456',
-      },
-    },
     `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-manifest`,

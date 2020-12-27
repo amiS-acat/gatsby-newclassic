@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 
-import music from "../../../../content/music/Golliwog's Cakewalk.mp3";
+import music from "../../../music/Golliwog's Cakewalk.mp3";
 
 const Pause = ({ stop }) => {
   return <div className="player" onClick={() => stop()}></div>;

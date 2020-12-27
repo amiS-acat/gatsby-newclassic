@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 
-import music from "../../../../content/music/Alborada_del_gracioso.mp3";
+import music from "../../../music/Alborada_del_gracioso.mp3";
 
 const Pause = ({ stop }) => {
   return <div className="player" onClick={() => stop()}></div>;
