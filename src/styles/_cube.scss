@@ -1,15 +1,23 @@
 @import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
 
-.cube {
-  body {
-    font-family: "Kosugi Maru", sans-serif;
-    font-size: 14px;
-    color: #374354;
+.cube-content {
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 14px;
+  color: $cWhite;
+  background-color: #c4c4c4;
+  width: 100%;
+  height: auto;
+
+  .content-width {
+    background-image: url("../../frontmatter/images/picture/spiral-step3.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 255px;
   }
 
   a {
-    color: #374354;
+    color: $cWhite;
     &:hover {
       opacity: 0.3;
     }
@@ -17,69 +25,103 @@
 
   header {
     height: 382px;
+    transition: 1s;
     button {
       position: absolute;
       z-index: 10;
       right: 31px;
-      top: 35px;
-      span {
+      top: 4%;
+      height: 60px;
+      width: 100px;
+      & > span {
+        position: absolute;
+        right: 0;
         background-color: $cWhite;
+        &:nth-child(1) {
+          width: 100px;
+        }
+        &:nth-child(2) {
+          width: 70px;
+          top: 55px;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
       }
     }
   }
 
+  .mobile-menu-open {
+    transition: opacity 0.5s;
+  }
+
   .top-img {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
+    float: right;
     width: 80%;
     height: 382px;
     overflow: hidden;
     border-radius: 0px 0px 0px 47px / 0px 0px 0px 70px;
-    .gatsby-image-wrapper{
+    .gatsby-image-wrapper {
       width: 100%;
       height: 100%;
     }
   }
 
-  .lists {
-    float: left;
-    margin: 0 3%;
-    line-height: 55px;
+  .list {
+    padding: 3%;
   }
 
   .list-top {
-    margin: 3%;
     text-align: right;
     background-color: black;
     border-radius: 10px;
-    font-size: 53px;
+    font-size: 59px;
     line-height: 63px;
     color: white;
-    width: 57px;
-    height: 53px;
+    width: 53px;
+    height: 55px;
+    overflow: hidden;
+  }
+
+  .lists {
+    line-height: 55px;
   }
 
   .top__text {
+    position: relative;
+    border-radius: 10px;
     text-align: center;
     font-size: 29px;
     font-weight: bold;
     line-height: 47px;
-    margin: auto;
+    margin: 20px auto 4px;
     width: 90%;
+  }
+
+  .mirror-text {
+    position: absolute;
+    background-color: unset;
+    top: 8px;
+    left: 33px;
+    transform: rotateX(180deg);
+    color: #bdbcbc;
   }
 
   .text-small {
     font-size: 16px;
   }
 
-  .square {
+  .small-box {
     width: 11px;
     height: 11px;
     background-color: $cBlack;
     border-radius: 3px;
     display: inline-block;
+  }
+
+  .back-img-wrapper {
+    position: absolute !important;
+    left: 37%;
   }
 
   .Box {
@@ -148,6 +190,7 @@
 
   .text-desc {
     text-align: center;
+    font-weight: bold;
     margin-top: 14px;
     margin-bottom: 200px;
     line-height: 22px;
@@ -157,10 +200,10 @@
     font-size: 20px;
   }
 
-  .border--black {
-    background-color: $cBlack;
+  .border--gray {
+    background-color: #ababab;
     width: 90%;
-    height: 3px;
+    height: 5px;
     margin: 0 auto 40px;
   }
 
@@ -214,6 +257,10 @@
     .composer {
       width: 100%;
       margin-bottom: 20px;
+    }
+
+    .composer-text {
+      margin-top: 5px;
     }
   }
 }

@@ -14,11 +14,13 @@ const Index = ({ data }) => {
     <>
       <Header />
       <SEO />
-      {posts.map(({ node }) => (
-        <Link to={node.frontmatter.slug} key={node.frontmatter.slug}>
-          <h2>{node.frontmatter.title}</h2>
-        </Link>
-      ))}
+      <div className="content-width">
+        {posts.map(({ node }) => (
+          <Link to={node.frontmatter.slug} key={node.frontmatter.slug}>
+            <h2>{node.frontmatter.title}</h2>
+          </Link>
+        ))}
+      </div>
       <Footer />
     </>
   );

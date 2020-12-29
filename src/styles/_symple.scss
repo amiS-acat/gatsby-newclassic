@@ -3,7 +3,7 @@
 $headerHeight: 200px;
 $cGray: #f3f3f3;
 
-.symple {
+.symple-content {
   @keyframes rotation {
     0% {
       transform: rotateY(0) rotate(45deg);
@@ -57,7 +57,17 @@ $cGray: #f3f3f3;
   }
 
   .top-img {
+    position: absolute !important;
+    top: 200px;
+    right: 0;
+    min-width: 653px;
+    width: 100%;
     height: 300px;
+  }
+
+  .top-img-wrapper{
+    height: 300px;
+    width: 100%;
   }
 
   .big-sircle {

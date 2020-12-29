@@ -10,7 +10,7 @@ import LaFiile from "../players/LaFille";
 import Arabesque from "../players/Arabesque";
 import Golliwog from "../players/Golliwog";
 
-const Index = () => {
+const Section = () => {
   const data = useStaticQuery(graphql`
     {
       flag: file(relativePath: { eq: "images/icon/france.png" }) {
@@ -107,4 +107,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Section;

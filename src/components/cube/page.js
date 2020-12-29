@@ -5,9 +5,9 @@ import Section1 from "./components/section1";
 import Section2 from "./components/section2";
 import Footer from "../org/footer";
 
-const Index = () => {
+const Page = () => {
   return (
-    <div className="cube">
+    <div className="cube-content">
       <Header />
       <div className="content-width">
         <Section1 />
@@ -18,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Page;

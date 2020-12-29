@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-const Index = () => {
+const Section = () => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "images/photo/debussy.jpg" }) {
@@ -17,6 +17,7 @@ const Index = () => {
   return (
     <section>
       <Img className="top-img" fluid={data.file.childImageSharp.fluid} />
+      <div className="top-img-wrapper"></div>
       <div className="content-width">
         <section>
           <div className="display-flex-block">
@@ -36,4 +37,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Section;

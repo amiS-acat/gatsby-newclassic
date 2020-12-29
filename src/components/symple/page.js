@@ -7,9 +7,9 @@ import Section3 from "./components/section3";
 import Header from "./components/header";
 import Footer from "../org/footer";
 
-const Index = () => {
+const Page = () => {
   return (
-    <div className="symple">
+    <div className="symple-content">
       <Header />
       <Section1 />
       <div className="content-width">
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Page;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-const Index = () => {
+const Section = () => {
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(true);
   const [click3, setClick3] = useState(true);
@@ -161,4 +161,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Section;

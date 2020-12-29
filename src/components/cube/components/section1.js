@@ -4,13 +4,13 @@ import { graphql, useStaticQuery } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCrow } from "@fortawesome/free-solid-svg-icons";
 
-import Noctuelles from "../player/Noctuellesflac";
-import Oiseaux from "../player/Oiseaux_tristes";
-import Une from "../player/Une_barque_sur_l'ocean";
-import Alborada from "../player/Alborada_del_gracioso";
-import Vallee from "../player/La_vallee_des_cloches";
+import Noctuelles from "../players/Noctuellesflac";
+import Oiseaux from "../players/Oiseaux_tristes";
+import Une from "../players/Une_barque_sur_l'ocean";
+import Alborada from "../players/Alborada_del_gracioso";
+import Vallee from "../players/La_vallee_des_cloches";
 
-const Index = () => {
+const Section = () => {
   const [click1, setClick1] = useState(false);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
@@ -236,4 +236,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Section;

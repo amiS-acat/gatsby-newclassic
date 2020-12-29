@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 
-const Index = () => {
+const Section = () => {
 
   const data = useStaticQuery(graphql`
     {
@@ -18,7 +18,7 @@ const Index = () => {
 
   return (
     <>
-      <div className="border--black"></div>
+      <div className="border--gray"></div>
       <section className="composer display-flex-block">
         <Img
           className="composer-img"
@@ -36,4 +36,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Section;
