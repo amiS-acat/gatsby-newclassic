@@ -1,3 +1,46 @@
 .verticalLine-content{
-    
+
+    .header{
+        background-color: black;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .icon{
+        border-radius: 5px;
+        margin: 40px 0;
+    }
+
+    header{
+        a{
+            color: $cWhite;
+            line-height: 3rem;
+        }
+    }
+
+    .img-bg{
+        margin-left: 20%;
+        padding: 1%;
+        background-color: pink;
+        width: 78%;
+        height: 300px;
+    }
+
+    .img-bg--orange{
+        background-color: #ffdeb5;
+    }
+
+    .img-bg--blue{
+        background-color: #d3eaec;
+    }
+
+    .img-bg--yellow{
+        background-color: #fff0a8;
+    }
+
+    .img-wrapper{
+        width: 100%;
+        height: 100%;
+    }
 }

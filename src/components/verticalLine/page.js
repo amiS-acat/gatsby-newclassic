@@ -1,7 +1,6 @@
 import React from "react";
 
-import Header from "../org/header";
-import Footer from "../org/footer";
+import Header from "./components/header";
 
 import Section1 from "./components/section1";
 
@@ -10,7 +9,6 @@ const Page = () => {
     <div className="verticalLine-content">
       <Header />
       <Section1 />
-      <Footer />
     </div>
   );
 };
