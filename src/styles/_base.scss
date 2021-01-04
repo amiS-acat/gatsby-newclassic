@@ -14,7 +14,7 @@ a {
   outline: none !important;
   text-decoration: none !important;
   cursor: pointer;
-  color: $cIconButtonA;
+  color: $cButton;
   &:hover {
     color: $cBlack;
   }
@@ -34,7 +34,7 @@ ul {
   display: none;
 }
 
-.font-bold{
+.font-bold {
   font-weight: bold;
 }
 
@@ -50,7 +50,7 @@ ul {
   display: flex;
 }
 
-.display-flex-block{
+.display-flex-block {
   display: flex;
 }
 
@@ -60,19 +60,6 @@ ul {
 
 .display-flex-block {
   display: flex;
-}
-@media screen and (max-width: 600px) {
-  .sp-display-none {
-    display: none;
-  }
-
-  .pc-display-none {
-    display: inline-block;
-  }
-
-  .display-flex-block {
-    display: block;
-  }
 }
 
 .sircle {
@@ -96,7 +83,7 @@ ul {
 }
 .footer {
   width: 100%;
-  background-color: $cBack;
+  background-color: $cFooter;
   &__inner {
     @extend .content-width;
     padding: 30px 0;
@@ -104,12 +91,26 @@ ul {
       padding-left: 10px;
       & li {
         & a {
-          color: $cIconButtonA;
+          color: $cButton;
           &:hover {
             color: $cBlack;
           }
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sp-display-none {
+    display: none;
+  }
+
+  .pc-display-none {
+    display: inline-block;
+  }
+
+  .display-flex-block {
+    display: block;
   }
 }

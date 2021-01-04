@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "./components/header";
+import Header from "./header";
 
-import Section1 from "./components/section1";
+import Section1 from "./section1";
 
 const Page = () => {
   return (

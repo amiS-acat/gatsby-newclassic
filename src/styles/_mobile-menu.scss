@@ -44,7 +44,7 @@
             transition: opacity 1s;}
         &__btn {
             & > span {
-                background-color: $cMenuOpen;
+                background-color: $cBlack;
                 &:nth-child(1) {transform: translateY(11px) rotate(135deg);}
                 &:nth-child(2) {transform:  scaleX(0);}
                 &:nth-child(3) {transform: translateY(-11px) rotate(-135deg);}}}}}

@@ -1,0 +1,40 @@
+.top-content {
+  .FV {
+    text-align: center;
+    padding: 300px 0;
+    width: 100%;
+  }
+
+  .scroll-container {
+    overflow: scroll;
+    height: 250px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inner-content {
+    min-width: fit-content;
+  }
+
+  .content-item {
+    max-width: 98vw;
+    border-left: 2px solid $cBlack;
+    border-right: 2px solid $cBlack;
+  }
+
+  .middle-content {
+    font-size: 12px;
+    text-align: center;
+    width: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .FV {
+      padding: 100px 0;
+    }
+  }
+}

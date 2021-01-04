@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "./components/header";
-import Section1 from "./components/section1";
-import Section2 from "./components/section2";
+import Header from "./header";
+import Section1 from "./section1";
+import Section2 from "./section2";
 import Footer from "../org/footer";
 
 const Page = () => {

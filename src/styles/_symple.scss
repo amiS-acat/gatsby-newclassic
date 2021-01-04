@@ -1,9 +1,7 @@
-@import "variables";
-
-$headerHeight: 200px;
-$cGray: #f3f3f3;
-
 .symple-content {
+  $headerHeight: 200px;
+  $cGray: #f3f3f3;
+
   @keyframes rotation {
     0% {
       transform: rotateY(0) rotate(45deg);
@@ -65,7 +63,7 @@ $cGray: #f3f3f3;
     height: 300px;
   }
 
-  .top-img-wrapper{
+  .top-img-wrapper {
     height: 300px;
     width: 100%;
   }
@@ -203,10 +201,16 @@ $cGray: #f3f3f3;
       padding: 48% 0;
     }
     .label-img {
-      height: 22rem;
+      height: 200px;
+      text-align: left;
     }
     .label-img-0 {
-      height: 22rem;
+      height: 200px;
+    }
+    .white-text{
+      padding: 0 7px;
+      writing-mode: unset;
+      font-size: 2rem;
     }
   }
   @media screen and (max-width: 311px) {
