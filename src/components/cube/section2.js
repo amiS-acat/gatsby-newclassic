@@ -21,7 +21,7 @@ const Section = () => {
       <div className="border--gray"></div>
       <section className="composer display-flex-block">
         <Img
-          className="composer-img"
+          className="border-radius"
           fixed={data.ravel.childImageSharp.fixed}
         />
         <div className="composer-text">

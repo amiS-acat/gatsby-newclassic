@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import InnreLink from "../innerLink";
 
@@ -32,11 +33,18 @@ const Header = () => {
               <Img fixed={data.file.childImageSharp.fixed} alt="" />
             </Link>
           )}
-          <button onClick={() => setMobileClick((prevState) => !prevState)}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className="headerNavi-btn">
+            <a
+              className="font-bold"
+              onClick={() => scrollTo("#a01")}
+              style={{ marginRight: "20px" }}
+            >
+              Section1
+            </a>
+            <a className="font-bold" onClick={() => scrollTo("#a01")}>
+              profile
+            </a>
+          </div>
         </div>
       </header>
       <div className="header__under"></div>

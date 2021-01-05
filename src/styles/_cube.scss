@@ -216,14 +216,15 @@
     margin: auto 30px;
   }
 
-  .composer-img {
-    border-radius: 10px;
-  }
-
   .player {
     position: absolute;
     width: 140px;
     height: 140px;
+    transition: 1s;
+    border-radius: 10px;
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media screen and (max-width: 600px) {

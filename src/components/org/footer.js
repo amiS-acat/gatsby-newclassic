@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <Link to={`/`} className="icon">
+        <Link to="/" className="icon">
           <Img fixed={data.file.childImageSharp.fixed} />
         </Link>
         <ul>

@@ -53,7 +53,7 @@ const Section = () => {
 
   return (
     <>
-      <div className="title">program note</div>
+      <div className="title">note</div>
       <section style={{ margin: "40px 0" }}>
         <div className="display-flex-block">
           <div

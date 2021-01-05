@@ -1,4 +1,5 @@
 body {
+  min-width: 260px;
   font-size: 16px;
 }
 body,
@@ -14,9 +15,9 @@ a {
   outline: none !important;
   text-decoration: none !important;
   cursor: pointer;
-  color: $cButton;
+  color: $cBlack;
   &:hover {
-    color: $cBlack;
+    opacity: 0.5;
   }
 }
 ul {
@@ -34,6 +35,10 @@ ul {
   display: none;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -42,8 +47,8 @@ ul {
   text-align: center;
 }
 
-.position-relative {
-  position: relative;
+.text-align-left-center {
+  text-align: left;
 }
 
 .display-flex {
@@ -58,8 +63,25 @@ ul {
   flex: 1;
 }
 
-.display-flex-block {
-  display: flex;
+.max-width-100 {
+  max-width: 100%;
+}
+
+.height-fit {
+  height: fit-content;
+}
+
+.scroll-container {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.border-radius{
+  border-radius: 10px;
 }
 
 .sircle {
@@ -73,32 +95,6 @@ ul {
 
 .icon {
   margin: auto 0;
-  & .gatsby-image-wrapper {
-    & picture {
-      & img {
-        position: relative !important;
-      }
-    }
-  }
-}
-.footer {
-  width: 100%;
-  background-color: $cFooter;
-  &__inner {
-    @extend .content-width;
-    padding: 30px 0;
-    & ul {
-      padding-left: 10px;
-      & li {
-        & a {
-          color: $cButton;
-          &:hover {
-            color: $cBlack;
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -112,5 +108,9 @@ ul {
 
   .display-flex-block {
     display: block;
+  }
+
+  .text-align-left-center {
+    text-align: center;
   }
 }
