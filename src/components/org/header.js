@@ -32,7 +32,10 @@ const Header = () => {
               <Img fixed={data.file.childImageSharp.fixed} alt="" />
             </Link>
           )}
-          <button onClick={() => setMobileClick((prevState) => !prevState)}>
+          <button
+            onClick={() => setMobileClick((prevState) => !prevState)}
+            onKeyDown={() => setMobileClick((prevState) => !prevState)}
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -43,6 +46,7 @@ const Header = () => {
       <nav
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
         onClick={() => setMobileClick((prevState) => !prevState)}
+        onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
         <InnreLink />
       </nav>

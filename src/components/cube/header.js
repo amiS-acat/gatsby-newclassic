@@ -22,8 +22,11 @@ const Header = () => {
 
   return (
     <>
-      <header>
-        <button onClick={() => setMobileClick((prevState) => !prevState)}>
+      <header className="header">
+        <button
+          onClick={() => setMobileClick((prevState) => !prevState)}
+          onKeyDown={() => setMobileClick((prevState) => !prevState)}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -35,19 +38,44 @@ const Header = () => {
           <div className="list-top">鏡</div>
           <ul className="lists sp-display-none">
             <li>
-              <a onClick={() => scrollTo("#a01")}>蛾</a>
+              <a
+                onClick={() => scrollTo("#a01")}
+                onKeyDown={() => scrollTo("#a01")}
+              >
+                蛾
+              </a>
             </li>
             <li>
-              <a onClick={() => scrollTo("#a02")}>悲しい鳥たち</a>
+              <a
+                onClick={() => scrollTo("#a02")}
+                onKeyDown={() => scrollTo("#a02")}
+              >
+                悲しい鳥たち
+              </a>
             </li>
             <li>
-              <a onClick={() => scrollTo("#a03")}>海原の小舟</a>
+              <a
+                onClick={() => scrollTo("#a03")}
+                onKeyDown={() => scrollTo("#a03")}
+              >
+                海原の小舟
+              </a>
             </li>
             <li>
-              <a onClick={() => scrollTo("#a04")}>道化師の朝の歌</a>
+              <a
+                onClick={() => scrollTo("#a04")}
+                onKeyDown={() => scrollTo("#a04")}
+              >
+                道化師の朝の歌
+              </a>
             </li>
             <li>
-              <a onClick={() => scrollTo("#a05")}>鐘の谷</a>
+              <a
+                onClick={() => scrollTo("#a05")}
+                onKeyDown={() => scrollTo("#a05")}
+              >
+                鐘の谷
+              </a>
             </li>
           </ul>
         </div>
@@ -74,6 +102,7 @@ const Header = () => {
       <nav
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
         onClick={() => setMobileClick((prevState) => !prevState)}
+        onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
         <InnerLink />
       </nav>

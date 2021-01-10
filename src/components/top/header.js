@@ -37,11 +37,16 @@ const Header = () => {
             <a
               className="font-bold"
               onClick={() => scrollTo("#a01")}
+              onKeyDown={() => scrollTo("#a01")}
               style={{ marginRight: "20px" }}
             >
               Section1
             </a>
-            <a className="font-bold" onClick={() => scrollTo("#a01")}>
+            <a
+              className="font-bold"
+              onClick={() => scrollTo("#a01")}
+              onKeyDown={() => scrollTo("#a01")}
+            >
               profile
             </a>
           </div>
@@ -51,6 +56,7 @@ const Header = () => {
       <nav
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
         onClick={() => setMobileClick((prevState) => !prevState)}
+        onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
         <InnreLink />
       </nav>

@@ -87,6 +87,7 @@ const Section = () => {
           <div
             className="player"
             onClick={() => setClick1((preveState) => !preveState)}
+            onKeyDown={() => setClick1((preveState) => !preveState)}
           >
             <Noctuelles />
           </div>
@@ -122,6 +123,7 @@ const Section = () => {
           <div
             className="player"
             onClick={() => setClick2((preveState) => !preveState)}
+            onKeyDown={() => setClick2((preveState) => !preveState)}
           >
             <Oiseaux />
           </div>
@@ -149,7 +151,10 @@ const Section = () => {
           ひっそりと息絶える
         </div>
         <div className="Box" id="a03">
-          <div onClick={() => setClick3((preveState) => !preveState)}>
+          <div
+            onClick={() => setClick3((preveState) => !preveState)}
+            onKeyDown={() => setClick3((preveState) => !preveState)}
+          >
             <Une />
           </div>
           <div className="BlackBox">
@@ -183,7 +188,10 @@ const Section = () => {
             <br className="pc-display-none" />
             <span className="title-font-size">道化師の朝の歌</span>
           </div>
-          <div onClick={() => setClick4((preveState) => !preveState)}>
+          <div
+            onClick={() => setClick4((preveState) => !preveState)}
+            onKeyDown={() => setClick4((preveState) => !preveState)}
+          >
             <Alborada />
           </div>
           <div className="BlackBox">
@@ -205,7 +213,10 @@ const Section = () => {
           スペインでの男の朝帰りの歌
         </div>
         <div className="Box" id="a05">
-          <div onClick={() => setClick5((preveState) => !preveState)}>
+          <div
+            onClick={() => setClick5((preveState) => !preveState)}
+            onKeyDown={() => setClick5((preveState) => !preveState)}
+          >
             <Vallee />
           </div>
           <div className="BlackBox">

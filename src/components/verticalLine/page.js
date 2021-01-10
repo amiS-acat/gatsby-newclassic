@@ -7,7 +7,7 @@ import Section1 from "./section1";
 const Page = () => {
   return (
     <div className="verticalLine-content">
-      <Header />
+      {/* <Header /> */}
       <Section1 />
     </div>
   );

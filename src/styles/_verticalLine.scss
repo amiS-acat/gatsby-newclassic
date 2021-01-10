@@ -1,42 +1,111 @@
 .verticalLine-content {
-  .header {
-    background-color: $cBlack;
-    width: 20%;
-    height: 100%;
-    text-align: center;
+  @import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+
+  font-family: "Tangerine", cursive;
+  button {
+    font-family: "Tangerine", cursive;
   }
 
-  .icon {
-    border-radius: 5px;
-    margin: 40px 0;
-  }
+  height: 100vh;
+  overflow: hidden;
 
-  header {
-    a {
-      color: $cWhite;
-      line-height: 3rem;
-    }
-  }
-
-  section {
-    display: flex;
-    background-color: #c3c2c2;
-    margin-left: 20%;
-    padding: 3%;
-    width: 74%;
-    height: 300px;
+  .img-container {
+    margin-left: 10rem;
+    width: 250px;
   }
 
   .img-wrapper {
-    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 230px;
+    padding: 10px;
   }
 
-  .bg-lightGray {
-    background-color: #d2d2d2;
+  .gatsby-image-wrapper {
+    height: 100%;
   }
 
-  .playBtn{
-      margin: 0 20px;
+  .tag {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    z-index: 10;
+    background-color: $cWhite;
+    width: 194px;
+    height: 60px;
   }
 
+  .tag-text {
+    text-align: center;
+    font-size: 28px;
+    line-height: 63px;
+  }
+
+  .tag-text--2 {
+    font-size: 25px;
+    line-height: 31px;
+  }
+
+  .img-active {
+    transform: translateY(0px) translateX(0);
+    transition: 0.5s;
+  }
+
+  .img-prev {
+    visibility: hidden;
+    transform: translateY(-1000px) translateX(-1000px);
+    transition: 0.5s;
+  }
+
+  .img-none {
+    visibility: hidden;
+  }
+
+  .img-next {
+    visibility: hidden;
+    transform: translateY(1000px) translateX(-1000px);
+    transition: 0.5s;
+  }
+
+  .note-container {
+    position: relative;
+    font-size: 35px;
+    width: 370px;
+  }
+
+  .note {
+    position: absolute;
+    top: 0;
+    width: max-content;
+  }
+
+  .note-active {
+    left: 20px;
+    transition: 1.5s;
+    opacity: 1;
+  }
+
+  .note-none {
+    left: 0;
+    transition: 0s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .play-container {
+    position: relative;
+    margin-top: 198px;
+    font-size: 52px;
+    .gatsby-image-wrapper {
+      top: 15px;
+    }
+  }
+
+  .player {
+    position: absolute;
+    width: 80.4px;
+    height: 52px;
+  }
 }

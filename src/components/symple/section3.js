@@ -59,6 +59,7 @@ const Section = () => {
           <div
             className="label"
             onClick={() => setClick1((prevState) => !prevState)}
+            onKeyDown={() => setClick1((prevState) => !prevState)}
           >
             <div className={click1 ? "label-note-0" : "label-note"}>
               <div className="black-text">
@@ -66,7 +67,8 @@ const Section = () => {
                 <br className="sp-display-none" />
                 アド　
                 <br className="sp-display-none" />
-                パルナスム博士<br className="sp-display-none" />
+                パルナスム博士
+                <br className="sp-display-none" />
                 <br />
                 01:51
               </div>
@@ -79,11 +81,12 @@ const Section = () => {
           <div
             className="label"
             onClick={() => setClick2((prevState) => !prevState)}
+            onKeyDown={() => setClick2((prevState) => !prevState)}
           >
             <div className={click2 ? "label-note-0" : "label-note"}>
               <div className="black-text">
                 月の光
-                <br className="sp-display-none"/>
+                <br className="sp-display-none" />
                 <br />
                 04:56
               </div>
@@ -96,6 +99,7 @@ const Section = () => {
           <div
             className="label"
             onClick={() => setClick3((prevState) => !prevState)}
+            onKeyDown={() => setClick3((prevState) => !prevState)}
           >
             <div className={click3 ? "label-note-0" : "label-note"}>
               <div className="black-text">
@@ -104,7 +108,7 @@ const Section = () => {
                 髪の
                 <br className="sp-display-none" />
                 乙女
-                <br className="sp-display-none"/>
+                <br className="sp-display-none" />
                 <br />
                 03:09
               </div>
@@ -117,12 +121,14 @@ const Section = () => {
           <div
             className="label"
             onClick={() => setClick4((prevState) => !prevState)}
+            onKeyDown={() => setClick4((prevState) => !prevState)}
           >
             <div className={click4 ? "label-note-0" : "label-note"}>
               <div className="black-text">
-                アラベスク　<br className="sp-display-none"/>
+                アラベスク　
+                <br className="sp-display-none" />
                 No. 1
-                <br className="sp-display-none"/>
+                <br className="sp-display-none" />
                 <br />
                 04:24
               </div>
@@ -135,13 +141,15 @@ const Section = () => {
           <div
             className="label"
             onClick={() => setClick5((prevState) => !prevState)}
+            onKeyDown={() => setClick5((prevState) => !prevState)}
           >
             <div className={click5 ? "label-note-0" : "label-note"}>
               <div className="black-text">
-                ゴリウォーク<br className="sp-display-none"/>
-                の<br className="sp-display-none"/>
+                ゴリウォーク
+                <br className="sp-display-none" />
+                の<br className="sp-display-none" />
                 ケークウォーク
-                <br className="sp-display-none"/>
+                <br className="sp-display-none" />
                 <br />
                 04:21
               </div>
