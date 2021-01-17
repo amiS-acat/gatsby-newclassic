@@ -14,21 +14,21 @@ const Section = () => {
               image_pc {
                 childImageSharp {
                   fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
               image_ipad {
                 childImageSharp {
                   fluid(maxWidth: 200) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
               image_sp {
                 childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 149) {
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
@@ -133,7 +133,7 @@ const Section = () => {
               <Img
                 className="display-parts sp"
                 fluid={data.sp_bottom.childImageSharp.fluid}
-                style={{ bottom: "1px" }}
+                style={{ bottom: "-1px" }}
               />
               <div className="scroll-container sp_inner">
                 <Img

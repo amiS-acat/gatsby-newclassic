@@ -1,14 +1,14 @@
 import React from "react";
 
-import Footer from "./footer";
+import Header from "./header";
 
 import Section1 from "./section1";
 
 const Page = () => {
   return (
     <div className="cards-content">
+      <Header />
       <Section1 />
-      <Footer />
     </div>
   );
 };
