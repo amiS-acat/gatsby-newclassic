@@ -16,22 +16,21 @@ const Section = () => {
   `);
   return (
     <section>
-      <Img className="top-img" fluid={data.file.childImageSharp.fluid} />
-      <div className="top-img-wrapper"></div>
+      <div className="top-img-wrapper">
+        <Img className="top-img" fluid={data.file.childImageSharp.fluid} />
+      </div>
       <div className="content-width">
-        <section>
-          <div className="display-flex-block">
-            <div className="big-sircle">
-              <div className="sircle-text">Claude Achille Debussy</div>
-            </div>
-            <div className="cube-container">
-              <div className="cube"></div>
-            </div>
-            <div className="big-sircle">
-              <div className="sircle-text">クロード・アシル・ドビュッシー</div>
-            </div>
+        <div className="display-flex-block">
+          <div className="big-sircle">
+            <div className="sircle-text">Claude Achille Debussy</div>
           </div>
-        </section>
+          <div className="cube-container">
+            <div className="cube"></div>
+          </div>
+          <div className="big-sircle">
+            <div className="sircle-text">クロード・アシル・ドビュッシー</div>
+          </div>
+        </div>
       </div>
     </section>
   );

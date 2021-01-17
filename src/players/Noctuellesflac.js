@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 import music from "../../frontmatter/music/Noctuelles.mp3";

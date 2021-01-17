@@ -41,8 +41,6 @@ export default props => {
 
       <link rel="canonical" href={url} />
 
-      <link rel="stylesheet" href="../styles/destyle.css" />
-
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

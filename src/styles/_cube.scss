@@ -1,6 +1,5 @@
 .cube-content {
   font-family: "Kosugi Maru", sans-serif;
-  font-size: 14px;
   color: $cWhite;
   background-color: #c4c4c4;
   width: 100%;
@@ -20,9 +19,19 @@
     }
   }
 
+  .bar--black {
+    height: 3px;
+    width: 400px;
+    margin: auto;
+    background-color: $cBlack;
+  }
+
   .header {
+    position: relative;
     height: 382px;
     transition: 1s;
+    background-color: #c4c4c4;
+    border: none;
     button {
       position: absolute;
       z-index: 10;
@@ -52,56 +61,31 @@
     transition: opacity 0.5s;
   }
 
-  .top-img {
-    float: right;
-    width: 80%;
-    height: 382px;
-    overflow: hidden;
-    border-radius: 0px 0px 0px 47px / 0px 0px 0px 70px;
-    .gatsby-image-wrapper {
-      width: 100%;
-      height: 100%;
-    }
+  .padding {
+    padding-top: 100px;
   }
 
   .list {
-    padding: 3%;
-  }
-
-  .list-top {
+    margin-top: -140px;
+    padding: 0 5%;
     text-align: right;
-    background-color: $cBlack;
-    border-radius: 10px;
-    font-size: 59px;
-    line-height: 63px;
-    color: $cWhite;
-    width: 53px;
-    height: 55px;
-    overflow: hidden;
-  }
-
-  .lists {
-    line-height: 55px;
+    line-height: 30px;
   }
 
   .top__text {
-    position: relative;
-    border-radius: 10px;
+    margin: 0 auto;
     text-align: center;
+    border-radius: 10px;
     font-size: 29px;
     font-weight: bold;
     line-height: 47px;
-    margin: 20px auto 4px;
     width: 90%;
   }
 
   .mirror-text {
-    position: absolute;
     background-color: unset;
-    top: 8px;
-    left: 33px;
     transform: rotateX(180deg);
-    color: #bdbcbc;
+    color: #bbbbbb;
   }
 
   .text-small {
@@ -126,10 +110,57 @@
     display: flex;
   }
 
-  .BlackBox {
+  .whiteBox {
+    background-color: white;
+    padding-top: 100px;
+    padding-left: 20%;
+    margin-top: -100px;
+    margin-left: -20%;
+    margin-bottom: -46px;
+    width: 150%;
+    transform: rotate(-11deg);
+    color: $cBlack;
+  }
+
+  .bird--white {
     position: relative;
+    color: $cWhite;
+    margin-top: -130px;
+    font-size: 40px;
+  }
+
+  .bird--white--2 {
+    position: relative;
+    margin-top: -115px;
+    font-size: 20px;
+  }
+
+  .eye {
+    position: absolute;
+    top: -29px;
+    left: 187px;
+    font-size: 6px;
+    color: $cWhite;
+  }
+  .eye--2 {
+    position: absolute;
+    top: -14px;
+    left: 221px;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+  }
+
+  .whiteBox__inner {
+    display: flex;
+    transform: rotate(11deg);
+    opacity: 0.7;
+  }
+
+  .BlackBox {
     background-color: $cBlack;
     border-radius: 10px;
+    min-width: 140px;
     width: 140px;
     height: 140px;
   }
@@ -146,35 +177,25 @@
     font-size: 30px;
   }
 
-  .GrayBox {
-    position: absolute;
-    top: -25px;
-    background-color: $cBlack;
-    opacity: 0.1;
-    border-radius: 10px;
-    width: 260px;
-    height: 260px;
-  }
-
   section {
     :nth-child(1),
-    :nth-child(5),
-    :nth-child(9) {
+    :nth-child(3),
+    :nth-child(5) {
       .GrayBox {
         left: 20px;
       }
       .Box-text {
-        margin: auto 0 auto 125px;
+        margin: auto 0 auto 30px;
       }
     }
-    :nth-child(3),
-    :nth-child(7) {
+    :nth-child(2),
+    :nth-child(4) {
       justify-content: flex-end;
       .GrayBox {
         right: 20px;
       }
       .Box-text {
-        margin: auto 125px auto 0;
+        margin: auto 30px auto 0;
       }
     }
   }
@@ -182,11 +203,15 @@
   .Box-text {
     font-size: 24px;
     line-height: 35px;
-    margin: auto;
+  }
+  .under--black {
+    width: 100%;
+    height: 2px;
+    background-color: $cBlack;
   }
 
   .text-desc {
-    text-align: center;
+    font-size: 14px;
     font-weight: bold;
     margin-top: 14px;
     margin-bottom: 200px;
@@ -198,9 +223,9 @@
   }
 
   .border--gray {
-    background-color: #ababab;
+    background-color: $cBlack;
     width: 90%;
-    height: 5px;
+    height: 3px;
     margin: 0 auto 40px;
   }
 

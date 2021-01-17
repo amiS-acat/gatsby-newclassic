@@ -44,8 +44,8 @@ const Header = () => {
             </a>
             <a
               className="font-bold"
-              onClick={() => scrollTo("#a01")}
-              onKeyDown={() => scrollTo("#a01")}
+              onClick={() => scrollTo("#a02")}
+              onKeyDown={() => scrollTo("#a02")}
             >
               profile
             </a>

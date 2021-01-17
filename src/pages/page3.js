@@ -1,7 +1,7 @@
 import React from "react";
 
 import SEO from "../components/seo";
-import Page from "../components/verticalLine/page";
+import Page from "../components/cards/page";
 
 const Index = () => {
   return (

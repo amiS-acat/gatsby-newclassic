@@ -16,7 +16,8 @@ const Section = () => {
   `);
   return (
     <>
-      <h1 className="h1">Profile</h1>
+      <div className="scroll-top" id="a02"></div>
+      <h1 className="h1" id="a02">Profile</h1>
       <div
         className="content-width display-flex-block text-align-left-center"
         style={{ marginBottom: "30px" }}

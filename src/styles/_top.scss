@@ -1,4 +1,18 @@
 .top-content {
+  .scroll-top {
+    margin-top: -$headerHeight;
+    height: $headerHeight;
+  }
+
+  .h1 {
+    margin: 50px 0;
+    padding-left: 10px;
+  }
+
+  .h2 {
+    margin: 10px 0;
+  }
+
   @keyframes pendulum {
     0% {
       transform: rotate(0deg) translateX(-0.5px) translateY(0px);
@@ -71,11 +85,6 @@
   }
   .name_m {
     animation: 4.5s normal infinite purupuru;
-  }
-
-  .h1 {
-    margin: 50px 0;
-    padding-left: 10px;
   }
 
   .title {

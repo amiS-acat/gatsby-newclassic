@@ -85,11 +85,12 @@ const Section = () => {
 
   return (
     <>
+      <div className="scroll-top" id="a01"></div>
       <h1 className="h1">Section2</h1>
       {posts.map(({ node }) => (
         <div key={node.frontmatter.slug}>
           <div className="title">
-            <h2>
+            <h2 className="h2">
               <Link to={node.frontmatter.slug} key={node.frontmatter.slug}>
                 {node.frontmatter.title}
               </Link>

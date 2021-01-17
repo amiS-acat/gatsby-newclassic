@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+
 body {
+  font-family: "Noto Sans JP", sans-serif;
   min-width: 260px;
   font-size: 16px;
 }
@@ -7,6 +10,14 @@ span,
 p,
 h3 {
   margin: 0;
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 21px;
+  font-weight: bold;
 }
 button,
 a {
@@ -31,16 +42,32 @@ ul {
   min-width: $minWidth;
 }
 
+.player{
+  position: absolute;
+}
+
 .pc-display-none {
   display: none;
+}
+
+.display-none {
+  display: none !important;
 }
 
 .position-relative {
   position: relative;
 }
 
+.position-absolute-relative {
+  position: absolute;
+}
+
 .font-bold {
   font-weight: bold;
+}
+
+.text--black{
+  color: $cBlack;
 }
 
 .text-align-center {
@@ -55,6 +82,10 @@ ul {
   text-align: right;
 }
 
+.vertical{
+  writing-mode: vertical-rl;
+}
+
 .display-flex {
   display: flex;
 }
@@ -65,6 +96,14 @@ ul {
 
 .flex-1 {
   flex: 1;
+}
+
+.display-block{
+  display: block;
+}
+
+.display-inline-block{
+  display: inline-block;
 }
 
 .max-width-100 {
@@ -102,12 +141,16 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+  .position-absolute-relative {
+    position: relative;
+  }
+
   .sp-display-none {
-    display: none;
+    display: none !important;
   }
 
   .pc-display-none {
-    display: inline-block;
+    display: block;
   }
 
   .display-flex-block {
