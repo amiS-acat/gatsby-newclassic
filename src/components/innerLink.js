@@ -8,6 +8,7 @@ const InnerLink = () => {
         edges {
           node {
             frontmatter {
+              title
               number
               slug
             }
@@ -22,7 +23,7 @@ const InnerLink = () => {
     <ul>
       {posts.map(({ node }) => (
         <li key={node.frontmatter.slug}>
-          <Link to={node.frontmatter.slug}>{node.frontmatter.number}</Link>
+          <Link to={node.frontmatter.slug}>{node.frontmatter.number}. {node.frontmatter.title}</Link>
         </li>
       ))}
     </ul>

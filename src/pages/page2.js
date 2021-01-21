@@ -1,12 +1,12 @@
 import React from "react";
 
 import SEO from "../components/seo";
-import Page from "../components/cards/page";
+import Page from "../components/palette/page";
 
 const Index = () => {
   return (
     <>
-      <SEO pagetitle="ravel"/>
+      <SEO pagetitle="greffes"/>
       <Page />
     </>
   );

@@ -6,7 +6,7 @@ import Page from "../components/cards/page";
 const Index = () => {
   return (
     <>
-      <SEO pagetitle="griffes"/>
+      <SEO pagetitle="ravel"/>
       <Page />
     </>
   );

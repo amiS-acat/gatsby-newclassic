@@ -2,6 +2,13 @@
   $headerHeight: 200px;
   $cGray: #f3f3f3;
 
+  button,
+  a {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   @keyframes rotation {
     0% {
       transform: rotateY(0) rotate(45deg);
@@ -122,7 +129,7 @@
     }
     span {
       display: block;
-      margin: 8px 0;
+      margin: 15px 0;
       font-weight: bold;
     }
   }
@@ -208,7 +215,7 @@
     .label-img-0 {
       height: 200px;
     }
-    .white-text{
+    .white-text {
       padding: 0 7px;
       writing-mode: unset;
       font-size: 2rem;

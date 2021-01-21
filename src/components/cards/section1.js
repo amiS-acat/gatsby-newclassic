@@ -19,10 +19,10 @@ const Section = () => {
 
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "images/logo/name.png" }) {
+      bg: file(relativePath: { eq: "images/picture/canvas.jpg" }) {
         childImageSharp {
-          fixed(width: 175) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -80,6 +80,7 @@ const Section = () => {
 
   return (
     <>
+      <Img fluid={data.bg.childImageSharp.fluid} className="bg" />
       <div className="content-width">
         <div className="cards-container">
           <div className="vertical sp-display-none">
@@ -222,12 +223,12 @@ const Section = () => {
                   05:57
                 </div>
                 <Img
-                  className="img--sun"
-                  fixed={data.sun.childImageSharp.fixed}
-                />
-                <Img
                   className="img--guy"
                   fixed={data.clown.childImageSharp.fixed}
+                />{" "}
+                <Img
+                  className="img--sun"
+                  fixed={data.sun.childImageSharp.fixed}
                 />
               </div>
             </div>
@@ -528,9 +529,11 @@ const Section = () => {
           <br />
           海原の小舟
           <br />
-          社会情勢に流されていく
+          小舟は社会情勢に流されていく人々の姿
           <br />
-          気まぐれな波に身を任せるしかない人々の悲しさと愚かさが描かれていると言われています
+          気まぐれな波に身を任せるしかない人々の
+          <br />
+          悲しさと愚かさが描かれていると言われています
         </div>
         <div
           className={
@@ -570,7 +573,7 @@ const Section = () => {
               ? "pc-display-none sp-text sp-text-none"
               : slides === 3
               ? "pc-display-none sp-text sp-text-none"
-              : "pc-display-nonesp-text"
+              : "pc-display-none sp-text"
           }
         >
           <br />
@@ -618,9 +621,6 @@ const Section = () => {
             ></div>
           </div>
         </div>
-        <Link to="/" className="logo">
-          newclassic
-        </Link>
       </footer>
     </>
   );

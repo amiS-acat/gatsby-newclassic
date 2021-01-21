@@ -9,10 +9,10 @@ const Hedaer = () => {
     <>
       <header className={mobileClick ? "header-open" : "header"}>
         <div className="header__inner">
-          <div>
-            Ravel Maurice　『 Miroirs 』
+          <div style={{marginBottom: "-3%"}}>
+            Ravel Maurice『 Miroirs 』
             <div className="mirror-text">
-              Ravel Maurice　『 Miroirs 』
+              Ravel Maurice『 Miroirs 』
             </div>
           </div>
           <button
