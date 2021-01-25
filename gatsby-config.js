@@ -3,7 +3,7 @@ module.exports = {
     title: `newclassic`,
     lang: `ja`,
     description: ``,
-    siteUrl: "https://amis-acat-newclassic.netlify.app",
+    siteUrl: "https://amis-acat.netlify.app",
     locale: `ja_JP`,
   },
   plugins: [
@@ -19,6 +19,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-netlify`
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   option: {
