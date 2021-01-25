@@ -79,26 +79,26 @@ const Section = () => {
             <FontAwesomeIcon icon={faHandPointRight} />
           </div>
         </div>
-        <button className="mini-sircle">
+        <button className="mini-sircle" aria-label="music">
           <Doctor />
           <Img className="sircle" fixed={data.green.childImageSharp.fixed} />
         </button>
-        <button className="mini-sircle">
+        <button className="mini-sircle" aria-label="music">
           <Moonlight />
           <Img
             className="sircle"
             fixed={data.moonlight.childImageSharp.fixed}
           />
         </button>
-        <button className="mini-sircle">
+        <button className="mini-sircle" aria-label="music">
           <LaFiile />
           <Img className="sircle" fixed={data.lafiile.childImageSharp.fixed} />
         </button>
-        <button className="mini-sircle">
+        <button className="mini-sircle" aria-label="music">
           <Arabesque />
           <Img className="sircle" fixed={data.pink.childImageSharp.fixed} />
         </button>
-        <button className="mini-sircle">
+        <button className="mini-sircle" aria-label="music">
           <Golliwog />
           <Img className="sircle" fixed={data.walk.childImageSharp.fixed} />
         </button>

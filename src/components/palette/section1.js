@@ -52,12 +52,14 @@ const Section = () => {
             <div className="gallery-item gallery-item--top">
               <button
                 className="Instax Instax--right"
+                aria-label="instax"
                 onClick={() => setPage(1)}
               >
                 <Img fluid={data.peacock.childImageSharp.fluid} />
               </button>
               <button
                 className="Instax Instax--left"
+                aria-label="instax"
                 onClick={() => setPage(2)}
               >
                 <Img fluid={data.nightfall.childImageSharp.fluid} />
@@ -66,12 +68,14 @@ const Section = () => {
             <div className="gallery-item gallery-item--bottom">
               <button
                 className="Instax Instax--right"
+                aria-label="instax"
                 onClick={() => setPage(3)}
               >
                 <Img fluid={data.acqua.childImageSharp.fluid} />
               </button>
               <button
                 className="Instax Instax--left"
+                aria-label="instax"
                 onClick={() => setPage(4)}
               >
                 <Img fluid={data.clouds.childImageSharp.fluid} />
