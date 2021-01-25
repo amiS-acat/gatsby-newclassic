@@ -5,12 +5,12 @@
   }
 
   .h1 {
-    margin: 50px 0;
+    margin: 20px;
     padding-left: 10px;
   }
 
   .h2 {
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   button,
@@ -70,9 +70,13 @@
     }
   }
 
+  .icon {
+    margin: auto 0;
+  }
+
   .FV {
     text-align: center;
-    padding: 300px 0;
+    padding: 210px 0 170px;
     width: 100%;
   }
 
@@ -95,8 +99,71 @@
   }
 
   .title {
-    // margin-top: -44px;
     text-align: center;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 342px;
+    background-color: #f1f1f1;
+  }
+
+  .card-container__inner {
+    position: relative;
+    margin: auto;
+    width: 400.64px;
+    max-width: 90%;
+    padding-top: 13px;
+    transition: 1s;
+  }
+
+  .card-container__inner--0 {
+    width: 197px;
+    transition: 1s;
+  }
+
+  .card-wrapper {
+    position: relative;
+    margin-top: 10px;
+    transition: 1s;
+  }
+
+  .card-wrapper--0 {
+    margin-left: -193px;
+    transition: 1s;
+  }
+
+  .card {
+    position: absolute !important;
+    top: 0;
+    left: 49.5%;
+    width: 50% !important;
+    max-width: 100%;
+    transform: scale(1);
+    transition: 1s;
+  }
+
+  .card--left {
+    width: 53% !important;
+  }
+
+  .card--right {
+    left: 49.5%;
+    width: 50.9% !important;
+  }
+
+  .card--none {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .card--open {
+    left: 0;
+    transform: scale(-1, 1);
+  }
+
+  .card--left--open {
+    left: -7px;
   }
 
   .display-parts {
@@ -111,9 +178,9 @@
 
   .pc_inner {
     position: absolute;
-    top: 13%;
+    top: 21%;
     left: 5.5%;
-    height: 248px;
+    height: 249px;
   }
 
   .ipad {
@@ -140,7 +207,7 @@
   }
 
   .footer {
-    background-color: #fbfbfb;;
+    background-color: #fbfbfb;
   }
 
   @media screen and (max-width: 600px) {

@@ -85,8 +85,8 @@ const Section = () => {
 
   return (
     <>
-      <div className="scroll-top" id="a01"></div>
-      <h1 className="h1">Section2</h1>
+      <div className="scroll-top" id="a02"></div>
+      <h1 className="h1">web</h1>
       {posts.map(({ node }) => (
         <div key={node.frontmatter.slug}>
           <div className="scroll-container display-flex">
@@ -111,7 +111,7 @@ const Section = () => {
                 <div className="scroll-container pc_inner">
                   <Img
                     fluid={node.frontmatter.image_pc.childImageSharp.fluid}
-                    style={{ width: "400px" }}
+                    style={{ width: "401px" }}
                   />
                 </div>
               </div>

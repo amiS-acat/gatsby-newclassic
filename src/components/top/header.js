@@ -10,9 +10,9 @@ const Header = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/logo/name.png" }) {
+      file(relativePath: { eq: "images/logo/icon1.png" }) {
         childImageSharp {
-          fixed(width: 175) {
+          fixed(width: 50) {
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
@@ -40,14 +40,14 @@ const Header = () => {
               onKeyDown={() => scrollTo("#a01")}
               style={{ marginRight: "20px" }}
             >
-              Section1
+              profile
             </a>
             <a
               className="font-bold"
               onClick={() => scrollTo("#a02")}
               onKeyDown={() => scrollTo("#a02")}
             >
-              profile
+              wep
             </a>
           </div>
         </div>

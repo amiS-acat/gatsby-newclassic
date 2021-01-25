@@ -4,7 +4,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 const InnerLink = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark (sort: {fields: frontmatter___slug ,order: ASC} ){
+      allMarkdownRemark(sort: { fields: frontmatter___slug, order: ASC }) {
         edges {
           node {
             frontmatter {
@@ -20,13 +20,15 @@ const InnerLink = () => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <ul>
+    <>
       {posts.map(({ node }) => (
         <li key={node.frontmatter.slug}>
-          <Link to={node.frontmatter.slug}>{node.frontmatter.number}. {node.frontmatter.title}</Link>
+          <Link to={node.frontmatter.slug}>
+            {node.frontmatter.number}. {node.frontmatter.title}
+          </Link>
         </li>
       ))}
-    </ul>
+    </>
   );
 };
 export default InnerLink;

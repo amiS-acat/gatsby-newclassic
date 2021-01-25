@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import Header from "../components/org/header";
-import Footer from "../components/org/footer";
 
 import SEO from "../components/seo";
 
@@ -28,7 +27,6 @@ const notFound = ({ data }) => {
           display: "block",
         }}
       />
-      <Footer />
     </>
   );
 };

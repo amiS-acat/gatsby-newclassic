@@ -9,9 +9,9 @@ const Header = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/logo/name.png" }) {
+      file(relativePath: { eq: "images/logo/icon1.png" }) {
         childImageSharp {
-          fixed(width: 175) {
+          fixed(width: 50) {
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
@@ -23,15 +23,13 @@ const Header = () => {
     <>
       <header className={mobileClick ? "header-open" : "header"}>
         <div className="header__inner">
-          {mobileClick ? (
-            <div className="icon">
-              <Img fixed={data.file.childImageSharp.fixed} alt="" />
-            </div>
-          ) : (
-            <Link to="/" className="icon">
-              <Img fixed={data.file.childImageSharp.fixed} alt="" />
-            </Link>
-          )}
+          <Link
+            to="/"
+            className="icon"
+            style={{ zIndex: mobileClick ? "-1" : "1" }}
+          >
+            <Img fixed={data.file.childImageSharp.fixed} alt="" />
+          </Link>
           <button
             onClick={() => setMobileClick((prevState) => !prevState)}
             onKeyDown={() => setMobileClick((prevState) => !prevState)}
@@ -48,7 +46,9 @@ const Header = () => {
         onClick={() => setMobileClick((prevState) => !prevState)}
         onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
-        <InnreLink />
+        <ul>
+          <InnreLink />
+        </ul>
       </nav>
     </>
   );

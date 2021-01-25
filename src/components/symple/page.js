@@ -5,7 +5,7 @@ import Section2 from "./section2";
 import Section3 from "./section3";
 
 import Header from "./header";
-import Footer from "../org/footer";
+import Footer from "./footer";
 
 const Page = () => {
   return (

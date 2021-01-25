@@ -1,50 +1,71 @@
 .mobile-menu {
-    position: fixed;
-    right: 0;
-    top: 60px;
-    width: 300px;
-    padding: 30px;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 300px;
+  padding: 30px;
+  visibility: hidden;
+  opacity: 0;
+  & ul {
+    padding-left: 80px;
+    & li {
+      padding: 20px 0;
+    }
+  }
+  &__cover {
+    transition: opacity 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
     visibility: hidden;
-    opacity:0;
-    & ul{padding-left: 80px;
-        & li{padding:20px 0;}}
-    &__cover {
-        transition: opacity 1s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        visibility: hidden;
-        opacity: 0;
-        cursor: pointer;
-        z-index: 200;}
-    &__btn{
-        & > span {
-            background-color: $cBlack;
-            width: 35px;
-            height: 2px;
-            display: block;
-            margin-bottom: 9px;
-            transition: transform 0.7s;
-            &:last-child {margin-bottom: 0;}
-        }}}
+    opacity: 0;
+    cursor: pointer;
+    z-index: 200;
+  }
+  &__btn {
+    & > span {
+      background-color: $cBlack;
+      width: 35px;
+      height: 2px;
+      display: block;
+      margin-bottom: 9px;
+      transition: transform 0.7s;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 .menu-open {
-    & #container {
-        transform: translate(-300px, 60px);
-        box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);}
-    & .mobile-menu {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 1s;
-        &__cover {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 1s;}
-        &__btn {
-            & > span {
-                background-color: $cBlack;
-                &:nth-child(1) {transform: translateY(11px) rotate(135deg);}
-                &:nth-child(2) {transform:  scaleX(0);}
-                &:nth-child(3) {transform: translateY(-11px) rotate(-135deg);}}}}}
+  & #container {
+    transform: translate(-300px, 60px);
+    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  }
+  & .mobile-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+    &__cover {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+    &__btn {
+      & > span {
+        background-color: $cBlack;
+        &:nth-child(1) {
+          transform: translateY(11px) rotate(135deg);
+        }
+        &:nth-child(2) {
+          transform: scaleX(0);
+        }
+        &:nth-child(3) {
+          transform: translateY(-11px) rotate(-135deg);
+        }
+      }
+    }
+  }
+}

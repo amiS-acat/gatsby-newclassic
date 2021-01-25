@@ -1,15 +1,15 @@
-import React from "react";
+// import React from "react";
 
-import SEO from "../components/seo";
-import Page from "../components/cards/page";
+// import SEO from "../components/seo";
+// import Page from "../components/cards/page";
 
-const Index = () => {
-  return (
-    <>
-      <SEO pagetitle="ravel"/>
-      <Page />
-    </>
-  );
-};
+// const Index = () => {
+//   return (
+//     <>
+//       <SEO pagetitle="ravel"/>
+//       <Page />
+//     </>
+//   );
+// };
 
-export default Index;
+// export default Index;

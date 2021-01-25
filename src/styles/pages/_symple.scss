@@ -1,5 +1,7 @@
 .symple-content {
-  $headerHeight: 200px;
+  @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+
+  $headerHeight: 180px;
   $cGray: #f3f3f3;
 
   button,
@@ -49,8 +51,8 @@
     background-color: $cWhite;
     height: $headerHeight;
     ul {
-      margin-top: 170px;
-      display: flex;
+      align-self: flex-end;
+      margin-bottom: 3px;
     }
     li {
       margin: 0 10px;
@@ -59,6 +61,12 @@
 
   .header__inner {
     height: $headerHeight;
+    font-family: "Kalam", cursive;
+  }
+
+  .icon {
+    align-self: flex-end;
+    margin-bottom: 5px;
   }
 
   .top-img-wrapper {
@@ -67,7 +75,7 @@
 
   .top-img {
     position: absolute !important;
-    top: 200px;
+    top: $headerHeight;
     right: 0;
     min-width: 653px;
     width: 100%;
@@ -195,6 +203,10 @@
     writing-mode: vertical-rl;
     color: $cWhite;
     font-size: 3rem;
+  }
+
+  .footer__inner {
+    text-align: center;
   }
 
   @media screen and (max-width: 600px) {

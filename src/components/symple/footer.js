@@ -1,8 +1,6 @@
 import React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-
-import InnerLink from "../innerLink";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -23,26 +21,15 @@ const Footer = () => {
       }
     }
   `);
-
   return (
-    <>
-      <footer className="footer">
-        <div className="footer__inner display-flex">
-          <Link to="/" className="icon">
-            <Img fixed={data.logo.childImageSharp.fixed} />
-            <Img
-              fixed={data.name.childImageSharp.fixed}
-              style={{ marginLeft: "10px" }}
-            />
-          </Link>
-          <ul>
-            List
-            <InnerLink />
-          </ul>
-        </div>
-      </footer>
-    </>
+    <footer className="footer">
+      <div className="footer__inner">
+        <Link to="/" className="icon">
+          <Img fixed={data.logo.childImageSharp.fixed} />
+          <Img fixed={data.name.childImageSharp.fixed} style={{marginLeft: "10px" }}/>
+        </Link>
+      </div>
+    </footer>
   );
 };
-
 export default Footer;

@@ -1,31 +1,23 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { Link } from "gatsby";
 
 import InnerLink from "../innerLink";
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/logo/name.png" }) {
-        childImageSharp {
-          fixed(width: 175) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `)
+import gif from "../../../frontmatter/gif/name.gif";
 
+const Header = () => {
   return (
     <header className="header">
-      <div className="header__inner">
+      <div className="header__inner font-bold">
         <div className="icon">
           <Link to="/">
-            <Img fixed={data.file.childImageSharp.fixed} alt="" />
+            <img src={gif} style={{ width: "150px" }} />
           </Link>
         </div>
-        <InnerLink />
+        <ul>
+          list
+          <InnerLink />
+        </ul>
       </div>
     </header>
   );
