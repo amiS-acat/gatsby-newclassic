@@ -6,7 +6,7 @@ import Page from "../components/symple/page";
 const Index = () => {
   return (
     <>
-      <SEO pagetitle="debussy"/>
+      <SEO pagetitle="debussy" pagepath="/debussy"/>
       <Page />
     </>
   );

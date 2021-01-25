@@ -51,12 +51,14 @@ const Section = () => {
           <div className="content-width">
             <div className="gallery-item gallery-item--top">
               <button
+                aria-hidden="true"
                 className="Instax Instax--right"
                 onClick={() => setPage(1)}
               >
                 <Img fluid={data.peacock.childImageSharp.fluid} />
               </button>
               <button
+                aria-hidden="true"
                 className="Instax Instax--left"
                 onClick={() => setPage(2)}
               >
@@ -65,12 +67,14 @@ const Section = () => {
             </div>
             <div className="gallery-item gallery-item--bottom">
               <button
+                aria-hidden="true"
                 className="Instax Instax--right"
                 onClick={() => setPage(3)}
               >
                 <Img fluid={data.acqua.childImageSharp.fluid} />
               </button>
               <button
+                aria-hidden="true"
                 className="Instax Instax--left"
                 onClick={() => setPage(4)}
               >
@@ -91,7 +95,7 @@ const Section = () => {
                   style={{ backgroundColor: "#d2d6d8" }}
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button aria-hidden="true" className="page__text">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -105,7 +109,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button aria-hidden="true" className="page__text">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -119,7 +123,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button aria-hidden="true" className="page__text">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -133,7 +137,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button aria-hidden="true" className="page__text">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>

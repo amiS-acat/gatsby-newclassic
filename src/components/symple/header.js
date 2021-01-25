@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header__inner font-bold">
         <div className="icon">
           <Link to="/">
-            <img src={gif} style={{ width: "150px" }} />
+            <img src={gif} style={{ width: "150px" }} alt="namegif"/>
           </Link>
         </div>
         <ul>
