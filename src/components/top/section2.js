@@ -102,18 +102,19 @@ const Section = () => {
                     </Link>
                   </h2>
                 </div>
-                <Img className="pc" fluid={data.pc.childImageSharp.fluid} />
-                <Img
-                  className="display-parts pc"
-                  fluid={data.pc_bottom.childImageSharp.fluid}
-                  style={{ bottom: "0" }}
-                />
-                <div className="scroll-container pc_inner">
-                  <Img
-                    fluid={node.frontmatter.image_pc.childImageSharp.fluid}
-                    style={{ width: "401px" }}
-                  />
+                <div className="pc">
+                  <Img fluid={data.pc.childImageSharp.fluid} />
+                  <div className="scroll-container pc_inner">
+                    <Img
+                      fluid={node.frontmatter.image_pc.childImageSharp.fluid}
+                      style={{ width: "397px" }}
+                    />
+                  </div>
                 </div>
+                <Img
+                  className="display-parts pc pc--bottom"
+                  fluid={data.pc_bottom.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="position-relative" style={{ margin: "41px 120px" }}>
