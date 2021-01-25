@@ -119,7 +119,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <butto className="page__text">
+                  <button className="page__text">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
