@@ -54,7 +54,6 @@ const Section = () => {
         <Img className="palette" fluid={data.FV.childImageSharp.fluid} />
         <div className="record-container">
           <button
-            aria-hidden="true"
             onClick={() => setPlay((prevState) => !prevState)}
             className="record-button"
           >
@@ -118,7 +117,7 @@ const Section = () => {
         className="page__bottom"
         style={{ backgroundColor: "#5E6C85" }}
       >
-        <button aria-hidden="true" className="page__text">
+        <button className="page__text">
           top <span className="text--arrow">⬆︎</span>
         </button>
       </div>
