@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `newclassic`,
     lang: `ja`,
-    description: ``,
+    description: `澤井安海のポートフォリオサイトです`,
     siteUrl: "https://amis-acat.netlify.app",
     locale: `ja_JP`,
   },
