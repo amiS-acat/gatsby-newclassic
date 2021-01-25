@@ -29,7 +29,7 @@ const Header = () => {
               <Img fixed={data.file.childImageSharp.fixed} alt="" />
             </div>
           ) : (
-            <Link to="/" className="icon">
+            <Link to="/" className="icon" aria-label="go home">
               <Img fixed={data.file.childImageSharp.fixed} alt="" />
             </Link>
           )}
