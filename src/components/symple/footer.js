@@ -24,9 +24,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <Link to="/" className="icon">
+        <Link to="/" className="icon" aria-label="go home">
           <Img fixed={data.logo.childImageSharp.fixed} />
-          <Img fixed={data.name.childImageSharp.fixed} style={{marginLeft: "10px" }}/>
+          <Img
+            fixed={data.name.childImageSharp.fixed}
+            style={{ marginLeft: "10px" }}
+          />
         </Link>
       </div>
     </footer>

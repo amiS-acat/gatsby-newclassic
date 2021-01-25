@@ -25,6 +25,7 @@ const Header = () => {
         <div className="header__inner">
           <Link
             to="/"
+            aria-label="go home"
             className="icon"
             style={{ zIndex: mobileClick ? "-1" : "1" }}
           >
