@@ -4,12 +4,25 @@ import useSound from "use-sound";
 import music from "../../frontmatter/music/The Fountain of the Acqua Paola.mp3";
 
 const Pause = ({ stop }) => {
-  return <div className="player" onClick={() => stop()}></div>;
+  return (
+    <div
+      className="player"
+      onClick={() => stop()}
+      onKeyDown={() => stop()}
+    ></div>
+  );
 };
 
 const Play = ({ play, stop }) => {
-  return <div className="player" onClick={(() => stop(), play)}></div>;
+  return (
+    <div
+      className="player"
+      onClick={(() => stop(), play)}
+      onKeyDown={(() => stop(), play)}
+    ></div>
+  );
 };
+
 
 const Player = () => {
   const [play, { stop, isPlaying }] = useSound(music);
