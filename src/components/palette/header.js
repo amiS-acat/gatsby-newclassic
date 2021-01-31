@@ -17,7 +17,7 @@ const Section = () => {
 
   return (
     <header className="content-width">
-      <div className="top-text">Roman Sketches</div>
+      <h1 className="top-text">Roman Sketches</h1>
       <Img
         className="img--palette"
         fluid={data.palette.childImageSharp.fluid}

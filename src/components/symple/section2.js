@@ -52,11 +52,11 @@ const Section = () => {
   `);
   return (
     <>
-      <div className="title">
+      <h1 className="title">
         <FontAwesomeIcon icon={faHandPointRight} className="handPoint" />
         click <span className="sp-display-none">for each button </span>to play
         music
-      </div>
+      </h1>
       <section className="display-flex-inline-block text-align-center">
         <button className="mini-sircle" aria-label="music">
           <Doctor />
