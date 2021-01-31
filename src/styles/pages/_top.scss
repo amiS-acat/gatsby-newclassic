@@ -5,12 +5,17 @@
   }
 
   .h1 {
-    margin: 20px;
-    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .h2 {
-    margin: 20px 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    font-weight: 100;
   }
 
   button,
@@ -111,7 +116,7 @@
   .card-container__inner {
     position: relative;
     margin: auto;
-    width: 400.64px;
+    width: 359px;
     max-width: 90%;
     padding-top: 13px;
     transition: 1s;
@@ -136,20 +141,24 @@
   .card {
     position: absolute !important;
     top: 0;
-    left: 49.5%;
-    width: 50% !important;
+    left: 47.5%;
+    width: 53.3% !important;
     max-width: 100%;
     transform: scale(1);
     transition: 1s;
   }
 
-  .card--left {
-    width: 53% !important;
+  .card-top--0 {
+    left: 55.5%;
+    width: 50% !important;
   }
 
-  .card--right {
-    left: 49.5%;
-    width: 50.9% !important;
+  .card--0{
+    left: 60%;
+  }
+
+  .card--left {
+    width: 52.3% !important;
   }
 
   .card--none {
@@ -166,6 +175,11 @@
     left: -7px;
   }
 
+  .card--control {
+    z-index: 10;
+    height: 283.5px;
+  }
+
   .display-parts {
     position: absolute !important;
     z-index: 10;
@@ -173,12 +187,11 @@
 
   .pc {
     position: relative;
-    max-width: 100%;
     width: 450px;
   }
 
   .pc--bottom {
-    bottom: -22%;
+    bottom: -24.5%;
   }
 
   .pc_inner {
@@ -209,7 +222,7 @@
     position: absolute;
     top: 18px;
     left: 18px;
-    height: 325px;
+    height: 310px;
     border-radius: 15px;
   }
 
@@ -218,11 +231,6 @@
   }
 
   @media screen and (max-width: 600px) {
-    .header {
-      .icon {
-        display: none;
-      }
-    }
     .FV {
       padding: 100px 0;
     }
@@ -231,15 +239,28 @@
       padding: 0;
       text-align: center;
     }
+
+    .card-container {
+      height: 80vw;
+      max-height: 342px;
+    }
+
+    .card-container__inner--0 {
+      width: 197px;
+      max-width: 30%;
+      transition: 1s;
+    }
+
+    .card-top--0 {
+      width: 55% !important;
+    }
+
+    .card--control {
+      height: 69vw;
+    }
   }
 
   @media screen and (max-width: 450px) {
-    .pc_inner {
-      width: 88%;
-      .gatsby-image-wrapper {
-        max-width: 100%;
-      }
-    }
     .pc--bottom {
       bottom: -20%;
     }

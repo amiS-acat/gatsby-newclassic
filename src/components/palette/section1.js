@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import Page1 from "./peacock";
@@ -8,6 +8,8 @@ import Page3 from "./acqua";
 import Page4 from "./clouds";
 
 const Section = () => {
+  const pageNumber = 2;
+
   const [page, setPage] = useState(0);
 
   const data = useStaticQuery(graphql`
@@ -40,13 +42,18 @@ const Section = () => {
           }
         }
       }
+      markdownRemark {
+        frontmatter {
+          number
+        }
+      }
     }
   `);
 
   return (
     <>
       <section>
-        <div className="title content-width">Gallery</div>
+        <div className="title content-width">Music</div>
         <div className="gallery">
           <div className="content-width">
             <div className="gallery-item gallery-item--top">
@@ -151,6 +158,9 @@ const Section = () => {
       ) : (
         ""
       )}
+      <button className="prev">
+        <Link to={`/page${pageNumber - 1}/`}>◀︎ prev</Link>
+      </button>
     </>
   );
 };

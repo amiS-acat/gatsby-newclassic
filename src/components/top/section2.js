@@ -86,67 +86,87 @@ const Section = () => {
   return (
     <>
       <div className="scroll-top" id="a02"></div>
-      <h1 className="h1">web</h1>
+      <h1 className="h1">Portfolio<span className="font-small">　印象派音楽を紹介するページ</span></h1>
       {posts.map(({ node }) => (
         <div key={node.frontmatter.slug}>
-          <div className="scroll-container display-flex">
-            <div className="position-relative height-fit max-width-100">
+          <h2 style={{marginLeft: "10px"}}>~ {node.frontmatter.title} ~</h2>
+          <div className="scroll-container display-flex" style={{    overflowY: "hidden"}}>
+            <div className="position-relative height-fit">
               <div>
                 <div className="title">
-                  <h2 className="h2">
-                    <Link
-                      to={node.frontmatter.slug}
-                      key={node.frontmatter.slug}
-                    >
-                      {node.frontmatter.title}
-                    </Link>
-                  </h2>
+                  <h2 className="h2">web</h2>
                 </div>
-                <div className="pc">
-                  <Img fluid={data.pc.childImageSharp.fluid} />
-                  <div className="scroll-container pc_inner">
+                <button>
+                  <a href={node.frontmatter.slug}>
+                    <div className="pc">
+                      <Img fluid={data.pc.childImageSharp.fluid} />
+                      <div className="scroll-container pc_inner">
+                        <Img
+                          fluid={
+                            node.frontmatter.image_pc.childImageSharp.fluid
+                          }
+                          style={{ width: "397px" }}
+                        />
+                      </div>
+                    </div>
+                  </a>
+                  <Img
+                    className="display-parts pc pc--bottom"
+                    fluid={data.pc_bottom.childImageSharp.fluid}
+                  />
+                </button>
+              </div>
+            </div>
+            <div>
+              <div className="title">
+                <h2 className="h2">tablet</h2>
+              </div>
+              <button
+                className="position-relative"
+                style={{ margin: "0px 120px" }}
+              >
+                <a href={node.frontmatter.slug}>
+                  <Img
+                    className="ipad"
+                    fluid={data.ipad.childImageSharp.fluid}
+                  />
+                  <div className="scroll-container ipad_inner">
                     <Img
-                      fluid={node.frontmatter.image_pc.childImageSharp.fluid}
-                      style={{ width: "397px" }}
+                      fluid={node.frontmatter.image_ipad.childImageSharp.fluid}
+                      style={{ width: "200px" }}
                     />
                   </div>
-                </div>
-                <Img
-                  className="display-parts pc pc--bottom"
-                  fluid={data.pc_bottom.childImageSharp.fluid}
-                />
-              </div>
+                </a>
+              </button>
             </div>
-            <div className="position-relative" style={{ margin: "41px 120px" }}>
-              <Img className="ipad" fluid={data.ipad.childImageSharp.fluid} />
-              <div className="scroll-container ipad_inner">
-                <Img
-                  fluid={node.frontmatter.image_ipad.childImageSharp.fluid}
-                  style={{ width: "200px" }}
-                />
+            <div>
+              <div className="title">
+                <h2 className="h2">mobile</h2>
               </div>
-            </div>
-            <div
-              className="position-relative height-fit"
-              style={{ paddingRight: "120px", marginTop: "32px" }}
-            >
-              <Img className="sp" fluid={data.sp.childImageSharp.fluid} />
-              <Img
-                className="display-parts sp"
-                fluid={data.sp_top.childImageSharp.fluid}
-                style={{ top: "0" }}
-              />
-              <Img
-                className="display-parts sp"
-                fluid={data.sp_bottom.childImageSharp.fluid}
-                style={{ bottom: "-1px" }}
-              />
-              <div className="scroll-container sp_inner">
-                <Img
-                  style={{ width: "150px" }}
-                  fluid={node.frontmatter.image_sp.childImageSharp.fluid}
-                />
-              </div>
+              <button
+                className="position-relative height-fit"
+                style={{ paddingRight: "120px", padding: "0" }}
+              >
+                <a href={node.frontmatter.slug}>
+                  <Img className="sp" fluid={data.sp.childImageSharp.fluid} />
+                  <Img
+                    className="display-parts sp"
+                    fluid={data.sp_top.childImageSharp.fluid}
+                    style={{ top: "0" }}
+                  />
+                  <Img
+                    className="display-parts sp"
+                    fluid={data.sp_bottom.childImageSharp.fluid}
+                    style={{ bottom: "1px" }}
+                  />
+                  <div className="scroll-container sp_inner">
+                    <Img
+                      style={{ width: "150px" }}
+                      fluid={node.frontmatter.image_sp.childImageSharp.fluid}
+                    />
+                  </div>
+                </a>
+              </button>
             </div>
           </div>
         </div>

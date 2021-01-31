@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-
 body {
   font-family: "Noto Sans JP", sans-serif;
   min-width: 260px;
   font-size: 16px;
+  font-weight: 100;
 }
 body,
 span,
@@ -13,11 +12,9 @@ h3 {
 }
 h1 {
   font-size: 24px;
-  font-weight: bold;
 }
 h2 {
   font-size: 21px;
-  font-weight: bold;
 }
 button,
 a {
@@ -38,7 +35,7 @@ ul {
   max-width: $maxWidth;
 }
 
-.player{
+.player {
   position: absolute;
 }
 
@@ -62,8 +59,18 @@ ul {
   font-weight: bold;
 }
 
-.text--black{
+.font-small {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.text--black,
+svg {
   color: $cBlack;
+}
+
+.text--white {
+  color: $cWhite;
 }
 
 .text-align-center {
@@ -78,7 +85,7 @@ ul {
   text-align: right;
 }
 
-.vertical{
+.vertical {
   writing-mode: vertical-rl;
 }
 
@@ -90,15 +97,19 @@ ul {
   display: flex;
 }
 
+.display-flex-inline-block {
+  display: flex;
+}
+
 .flex-1 {
   flex: 1;
 }
 
-.display-block{
+.display-block {
   display: block;
 }
 
-.display-inline-block{
+.display-inline-block {
   display: inline-block;
 }
 
@@ -111,12 +122,22 @@ ul {
 }
 
 .scroll-container {
+  position: relative;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-icon {
+  position: absolute !important;
+  color: rgba($color: $cBlack, $alpha: 0.6);
+  top: 1px;
+  right: 5px;
+  width: 18px !important;
+  height: auto;
 }
 
 .border-radius {
@@ -132,8 +153,20 @@ ul {
   cursor: pointer;
 }
 
-.HOME-btn{
+.HOME-btn {
   font-size: 32px;
+}
+
+.next {
+  margin-top: 10px;
+  float: right;
+  font-size: 21px;
+}
+
+.prev {
+  margin-top: 10px;
+  float: left;
+  font-size: 21px;
 }
 
 @media screen and (max-width: 600px) {
@@ -151,6 +184,10 @@ ul {
 
   .display-flex-block {
     display: block;
+  }
+
+  .display-flex-inline-block {
+    display: inline-block;
   }
 
   .text-align-left-center {

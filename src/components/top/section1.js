@@ -14,9 +14,23 @@ const Section = () => {
           }
         }
       }
+      card_name: file(relativePath: { eq: "images/picture/card--name.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
       card_favorite: file(
-        relativePath: { eq: "images/picture/card--left.png" }
+        relativePath: { eq: "images/picture/card--favorite.png" }
       ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+      card_prof: file(relativePath: { eq: "images/picture/card--prof.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -71,7 +85,9 @@ const Section = () => {
   return (
     <>
       <div className="scroll-top" id="a01"></div>
-      <h1 className="h1">Profile</h1>
+      <div className="content-width">
+        <h1 className="h1">Profile</h1>
+      </div>
       <div className="card-container">
         <div
           className={
@@ -79,7 +95,6 @@ const Section = () => {
               ? "card-container__inner card-container__inner--0"
               : "card-container__inner"
           }
-          onClick={() => (card === 6 ? setCard(0) : setCard(card + 1))}
         >
           <div
             className={
@@ -88,18 +103,32 @@ const Section = () => {
           >
             <Img
               className={
-                card >= 1
+                card === 0
+                  ? "card card--0 card--none"
+                  : card >= 1
                   ? "card card--left card--open card--left--open"
-                  : "card"
+                  : "card card--none"
+              }
+              fluid={data.card_name.childImageSharp.fluid}
+            />
+            <Img
+              className={
+                card === 0
+                  ? "card card--0 card--none"
+                  : card >= 2
+                  ? "card card--left card--open card--left--open"
+                  : "card card--none"
               }
               fluid={data.card_favorite.childImageSharp.fluid}
             />
             <Img
               alt="tea"
               className={
-                card === 6
-                  ? "card card--right card"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 7
+                  ? "card card--right"
+                  : card === 8
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -108,9 +137,11 @@ const Section = () => {
             <Img
               alt="color"
               className={
-                card === 5
-                  ? "card card--right card"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 6
+                  ? "card card--right"
+                  : card === 7
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -119,9 +150,11 @@ const Section = () => {
             <Img
               alt="sea"
               className={
-                card === 4
-                  ? "card card--right card"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 5
+                  ? "card card--right"
+                  : card === 6
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -130,9 +163,11 @@ const Section = () => {
             <Img
               alt="tofu"
               className={
-                card === 3
-                  ? "card card--right card"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 4
+                  ? "card card--right"
+                  : card === 5
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -141,9 +176,11 @@ const Section = () => {
             <Img
               alt="cat"
               className={
-                card === 2
-                  ? "card card--right card"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 3
+                  ? "card card--right"
+                  : card === 4
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -152,18 +189,46 @@ const Section = () => {
             <Img
               alt="piano"
               className={
-                card === 1
-                  ? "card card--right"
+                card === 0
+                  ? "card card--0 card--none"
                   : card === 2
+                  ? "card card--right"
+                  : card === 3
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
               fluid={data.card_piano.childImageSharp.fluid}
             />
             <Img
-              className={card === 0 ? "card" : "card card--open"}
+              alt="prof"
+              className={
+                card === 0
+                  ? "card card--0 card--none"
+                  : card === 1
+                  ? "card card--right"
+                  : card === 2
+                  ? "card card--right card--open card--none"
+                  : "card card--none"
+              }
+              fluid={data.card_prof.childImageSharp.fluid}
+            />
+            <Img
+              alt="top"
+              className={card === 0 ? "card card-top--0" : "card card--open"}
               fluid={data.card.childImageSharp.fluid}
               style={{ zIndex: card === 0 ? "0" : "-1" }}
+            />
+            <div
+              className={
+                card === 0
+                  ? "card card-top--0 card--right card--control"
+                  : "card card--right card--control"
+              }
+              onClick={() => (card === 7 ? setCard(0) : setCard(card + 1))}
+            />
+            <div
+              className={"card card--open card--control"}
+              onClick={() => (card === 0 ? "" : setCard(card - 1))}
             />
           </div>
         </div>

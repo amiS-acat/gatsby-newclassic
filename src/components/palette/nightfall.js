@@ -7,6 +7,7 @@ import Music from "../../players/Nightfall";
 
 const Section = () => {
   const [play, setPlay] = useState(false);
+  const [hover, setHover] = useState(false);
 
   const data = useStaticQuery(graphql`
     {
@@ -57,6 +58,8 @@ const Section = () => {
         <div className="record-container">
           <button
             onClick={() => setPlay((prevState) => !prevState)}
+            onMouseOver={() => setHover(true)}
+            onMouseOut={() => setHover(false)}
             className="record-button"
           >
             <Music />
@@ -66,8 +69,15 @@ const Section = () => {
               fluid={data.stylus.childImageSharp.fluid}
             />
             <div className={play ? "needle" : "needle needle--stop"}></div>
+            <div
+              className="play-btn"
+              style={{ display: hover ? "block" : "none" }}
+            >
+              {play ? "■" : "▶︎"}
+            </div>
           </button>
         </div>
+        <div　className="note-top">poem by William Sharp</div>
         <div className="note">
           <div className="note-en">
             The long day is over.

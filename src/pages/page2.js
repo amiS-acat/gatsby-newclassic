@@ -6,7 +6,7 @@ import Page from "../components/palette/page";
 const Index = () => {
   return (
     <>
-      <SEO pagetitle="greffes" pagepath="/griffes"/>
+      <SEO pagetitle="griffes" pagepath="/griffes"/>
       <Page />
     </>
   );

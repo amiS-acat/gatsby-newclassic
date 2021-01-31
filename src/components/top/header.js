@@ -35,19 +35,17 @@ const Header = () => {
           )}
           <div className="headerNavi-btn">
             <button
-              className="font-bold"
               onClick={() => scrollTo("#a01")}
               onKeyDown={() => scrollTo("#a01")}
               style={{ marginRight: "20px" }}
             >
-              profile
+              Profile
             </button>
             <button
-              className="font-bold"
               onClick={() => scrollTo("#a02")}
               onKeyDown={() => scrollTo("#a02")}
             >
-              wep
+              Portfolio
             </button>
           </div>
         </div>

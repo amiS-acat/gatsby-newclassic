@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 
 const Section = () => {
+  const page = 1;
+
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(true);
   const [click3, setClick3] = useState(true);
@@ -53,8 +55,7 @@ const Section = () => {
 
   return (
     <>
-      <div className="title">note</div>
-      <section style={{ margin: "40px 0" }}>
+      <section style={{ margin: "2% 0" }}>
         <div className="display-flex-block">
           <div
             className="label"
@@ -161,6 +162,9 @@ const Section = () => {
           </div>
         </div>
       </section>
+      <button className="next">
+        <Link to={`/page${page + 1}/`}>next▶︎</Link>
+      </button>
     </>
   );
 };
