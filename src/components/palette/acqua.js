@@ -59,6 +59,7 @@ const Section = () => {
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
             className="record-button"
+            aria-label="play"
           >
             <Music />
             <Img fluid={data.record.childImageSharp.fluid} />
@@ -75,7 +76,7 @@ const Section = () => {
             </div>
           </button>
         </div>
-        <div　className="note-top">poem by William Sharp</div>
+        <div className="note-top">poem by William Sharp</div>
         <div className="note">
           <div className="note-en">
             Shimmering lights
@@ -118,7 +119,7 @@ const Section = () => {
         className="page__bottom"
         style={{ backgroundColor: "#1F848B" }}
       >
-        <button className="page__text">
+        <button className="page__text" aria-label="control">
           top <span className="text--arrow">⬆︎</span>
         </button>
       </div>

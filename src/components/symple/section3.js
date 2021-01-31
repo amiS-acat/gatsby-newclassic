@@ -162,7 +162,7 @@ const Section = () => {
           </div>
         </div>
       </section>
-      <button className="next">
+      <button className="next" aria-label="control">
         <Link to={`/page${page + 1}/`}>next▶︎</Link>
       </button>
     </>

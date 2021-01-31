@@ -35,7 +35,7 @@ export default props => {
 
   return (
     <Helmet>
-      <html lang={data.site.siteMetadata.lang} />
+      <html lang="ja" data-react-helmet="lang"/>
       <title>{title}</title>
       <meta name="description" content={description} />
 

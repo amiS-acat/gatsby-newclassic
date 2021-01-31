@@ -86,18 +86,24 @@ const Section = () => {
   return (
     <>
       <div className="scroll-top" id="a02"></div>
-      <h1 className="h1">Portfolio<span className="font-small">　印象派音楽を紹介するページ</span></h1>
+      <h1 className="h1">
+        Portfolio
+        <span className="font-small">　印象派音楽を紹介するページ</span>
+      </h1>
       {posts.map(({ node }) => (
         <div key={node.frontmatter.slug}>
-          <h2 style={{marginLeft: "10px"}}>~ {node.frontmatter.title} ~</h2>
-          <div className="scroll-container display-flex" style={{    overflowY: "hidden"}}>
+          <h2 style={{ marginLeft: "10px" }}>~ {node.frontmatter.title} ~</h2>
+          <div
+            className="scroll-container display-flex"
+            style={{ overflowY: "hidden" }}
+          >
             <div className="position-relative height-fit">
               <div>
                 <div className="title">
                   <h2 className="h2">web</h2>
                 </div>
-                <button>
-                  <a href={node.frontmatter.slug}>
+                <button aria-label="page">
+                  <Link href={node.frontmatter.slug}>
                     <div className="pc">
                       <Img fluid={data.pc.childImageSharp.fluid} />
                       <div className="scroll-container pc_inner">
@@ -109,7 +115,7 @@ const Section = () => {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <Img
                     className="display-parts pc pc--bottom"
                     fluid={data.pc_bottom.childImageSharp.fluid}
@@ -124,8 +130,9 @@ const Section = () => {
               <button
                 className="position-relative"
                 style={{ margin: "0px 120px" }}
+                aria-label="page"
               >
-                <a href={node.frontmatter.slug}>
+                <Link to={node.frontmatter.slug}>
                   <Img
                     className="ipad"
                     fluid={data.ipad.childImageSharp.fluid}
@@ -136,7 +143,7 @@ const Section = () => {
                       style={{ width: "200px" }}
                     />
                   </div>
-                </a>
+                </Link>
               </button>
             </div>
             <div>
@@ -146,8 +153,9 @@ const Section = () => {
               <button
                 className="position-relative height-fit"
                 style={{ paddingRight: "120px", padding: "0" }}
+                aria-label="page"
               >
-                <a href={node.frontmatter.slug}>
+                <Link to={node.frontmatter.slug}>
                   <Img className="sp" fluid={data.sp.childImageSharp.fluid} />
                   <Img
                     className="display-parts sp"
@@ -165,7 +173,7 @@ const Section = () => {
                       fluid={node.frontmatter.image_sp.childImageSharp.fluid}
                     />
                   </div>
-                </a>
+                </Link>
               </button>
             </div>
           </div>

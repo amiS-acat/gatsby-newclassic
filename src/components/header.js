@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import InnreLink from "../innerLink";
+import InnreLink from "./innerLink";
 
 const Header = () => {
   const [mobileClick, setMobileClick] = useState(false);
@@ -34,6 +34,7 @@ const Header = () => {
           <button
             onClick={() => setMobileClick((prevState) => !prevState)}
             onKeyDown={() => setMobileClick((prevState) => !prevState)}
+            aria-label="mobile"
           >
             <span></span>
             <span></span>

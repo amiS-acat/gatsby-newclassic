@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import Header from "../components/org/header";
+import Header from "../components/header";
 
 import SEO from "../components/seo";
 

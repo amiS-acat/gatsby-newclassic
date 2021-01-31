@@ -102,7 +102,7 @@ const Section = () => {
                   style={{ backgroundColor: "#d2d6d8" }}
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -116,7 +116,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -130,7 +130,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -144,7 +144,7 @@ const Section = () => {
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text">
+                  <button className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
                   </button>
                 </div>
@@ -158,7 +158,7 @@ const Section = () => {
       ) : (
         ""
       )}
-      <button className="prev">
+      <button className="prev" aria-label="control">
         <Link to={`/page${pageNumber - 1}/`}>◀︎ prev</Link>
       </button>
     </>

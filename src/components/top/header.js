@@ -38,12 +38,14 @@ const Header = () => {
               onClick={() => scrollTo("#a01")}
               onKeyDown={() => scrollTo("#a01")}
               style={{ marginRight: "20px" }}
+              aria-label="scroll"
             >
               Profile
             </button>
             <button
               onClick={() => scrollTo("#a02")}
               onKeyDown={() => scrollTo("#a02")}
+              aria-label="scroll"
             >
               Portfolio
             </button>
