@@ -23,7 +23,7 @@ const InnerLink = () => {
     <>
       {posts.map(({ node }) => (
         <li key={node.frontmatter.slug}>
-          <Link to={node.frontmatter.slug}>
+          <Link to={node.frontmatter.slug} aria-label="link">
             {node.frontmatter.number}. {node.frontmatter.title}
           </Link>
         </li>

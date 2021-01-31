@@ -104,7 +104,7 @@ const Section = () => {
                     <h2 className="h2">web</h2>
                   </div>
                   <button aria-label="page">
-                    <Link href={node.frontmatter.slug}>
+                    <Link href={node.frontmatter.slug} aria-label="page-link">
                       <div className="pc">
                         <Img fluid={data.pc.childImageSharp.fluid} />
                         <div className="scroll-container pc_inner">
@@ -133,7 +133,7 @@ const Section = () => {
                   style={{ margin: "0px 120px" }}
                   aria-label="page"
                 >
-                  <Link to={node.frontmatter.slug}>
+                  <Link to={node.frontmatter.slug} aria-label="page-link">
                     <Img
                       className="ipad"
                       fluid={data.ipad.childImageSharp.fluid}
@@ -158,7 +158,7 @@ const Section = () => {
                   style={{ paddingRight: "120px", padding: "0" }}
                   aria-label="page"
                 >
-                  <Link to={node.frontmatter.slug}>
+                  <Link to={node.frontmatter.slug} aria-label="page-link">
                     <Img className="sp" fluid={data.sp.childImageSharp.fluid} />
                     <Img
                       className="display-parts sp"

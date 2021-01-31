@@ -159,7 +159,7 @@ const Section = () => {
         ""
       )}
       <button className="prev" aria-label="control">
-        <Link to={`/page${pageNumber - 1}/`}>◀︎ prev</Link>
+        <Link to={`/page${pageNumber - 1}/`} aria-label="link">◀︎ prev</Link>
       </button>
     </>
   );
