@@ -88,7 +88,7 @@ const Section = () => {
       <div className="content-width">
         <h1 className="h1">Profile</h1>
       </div>
-      <div className="card-container">
+      <section className="card-container">
         <div
           className={
             card === 0
@@ -232,7 +232,7 @@ const Section = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
