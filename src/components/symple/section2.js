@@ -15,35 +15,35 @@ const Section = () => {
     {
       green: file(relativePath: { eq: "images/picture/green.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 185) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       moonlight: file(relativePath: { eq: "images/picture/moonlight.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 185) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       lafiile: file(relativePath: { eq: "images/picture/lafiile.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 185) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       pink: file(relativePath: { eq: "images/picture/pink.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 185) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       walk: file(relativePath: { eq: "images/picture/walk.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 185) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
