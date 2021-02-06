@@ -4,11 +4,11 @@ import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 
-import Doctor from "../../players/Doctor";
-import Moonlight from "../../players/Moonlight";
-import LaFiile from "../../players/LaFille";
-import Arabesque from "../../players/Arabesque";
-import Golliwog from "../../players/Golliwog";
+import Doctor from "../../../frontmatter/music/DoctorGradusadParnassum.mp3";
+import Moonlight from "../../../frontmatter/music/moonlight.mp3";
+import LaFiile from "../../../frontmatter/music/La fille.mp3";
+import Arabesque from "../../../frontmatter/music/Arabesque No. 1.mp3";
+import Golliwog from "../../../frontmatter/music/Golliwog.mp3";
 
 const Section = () => {
   const data = useStaticQuery(graphql`
@@ -59,26 +59,26 @@ const Section = () => {
       </h1>
       <section className="display-flex-inline-block text-align-center">
         <button className="mini-sircle" aria-label="music">
-          <Doctor />
+          <audio controls src={Doctor} />
           <Img className="sircle" fluid={data.green.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <Moonlight />
+          <audio controls src={Moonlight} />
           <Img
             className="sircle"
             fluid={data.moonlight.childImageSharp.fluid}
           />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <LaFiile />
+          <audio controls src={LaFiile} />
           <Img className="sircle" fluid={data.lafiile.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <Arabesque />
+          <audio controls src={Arabesque} />
           <Img className="sircle" fluid={data.pink.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <Golliwog />
+          <audio controls src={Golliwog} />
           <Img className="sircle" fluid={data.walk.childImageSharp.fluid} />
         </button>
       </section>

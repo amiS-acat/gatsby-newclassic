@@ -57,14 +57,11 @@
   }
 
   .textBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba($color: $cWhite, $alpha: 0.5);
-    width: 30%;
-    height: 100%;
+    margin: auto;
+    width: 80%;
     padding: 3% 2%;
     font-size: 18px;
+    text-align: center;
   }
 
   .scroll-container {
@@ -99,6 +96,7 @@
 
   .mini-sircle {
     position: relative;
+    overflow: hidden;
     border-radius: 50%;
     flex: 1;
     margin: 20px;
@@ -177,9 +175,17 @@
     font-size: 6vw;
   }
 
-  .to500-none {
-    display: none;
+  audio {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 311px;
+    z-index: 5;
+    height: 66px;
+    transform: scale(3.3);
   }
+  
   @media screen and (max-width: 600px) {
     .textBox {
       text-align: center;
@@ -202,19 +208,6 @@
     }
     .font--mini {
       font-size: 2vw;
-    }
-  }
-  @media screen and (min-width: 500px) and (max-width: 600px) {
-    .to500-none {
-      display: block;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .from446-none {
-      display: none;
-    }
-    .textBox {
-      font-size: 16px;
     }
   }
 }
