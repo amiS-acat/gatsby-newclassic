@@ -3,11 +3,10 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-import Music from "../../players/White Peacock";
+import Music from "../../../frontmatter/music/White Peacock.mp3";
 
 const Section = () => {
-  const [play, setPlay] = useState(false);
-  const [hover, setHover] = useState(false);
+  const [play, setPlay] = useState(true);
 
   const data = useStaticQuery(graphql`
     {
@@ -56,24 +55,16 @@ const Section = () => {
         <div className="record-container">
           <button
             onClick={() => setPlay((prevState) => !prevState)}
-            onMouseOver={() => setHover(true)}
-            onMouseOut={() => setHover(false)}
             className="record-button"
             aria-label="play"
           >
-            <Music />
+            <audio id="audio" controls src={Music} />
             <Img fluid={data.record.childImageSharp.fluid} />
             <Img
               className={play ? "stylus" : "stylus stylus--stop"}
               fluid={data.stylus.childImageSharp.fluid}
             />
             <div className={play ? "needle" : "needle needle--stop"}></div>
-            <div
-              className="play-btn"
-              style={{ display: hover ? "block" : "none" }}
-            >
-              {play ? "■" : "▶︎"}
-            </div>
           </button>
         </div>
         <div className="note-top">poem by William Sharp</div>

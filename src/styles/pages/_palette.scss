@@ -137,7 +137,7 @@
     cursor: pointer;
     width: 100%;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 53px;
   }
 
   .stylus {
@@ -258,10 +258,10 @@
   }
 
   audio {
-    transform: scale(8);
+    transform: scale(10.3);
     position: absolute;
-    top: 38px;
-    left: 965px;
+    top: 58px;
+    left: 1289px;
     z-index: 10;
     opacity: 0;
     &:hover{

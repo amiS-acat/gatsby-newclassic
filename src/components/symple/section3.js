@@ -58,6 +58,9 @@ const Section = () => {
       <section style={{ margin: "2% 0" }}>
         <div className="display-flex-block">
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="menu"
             className="label"
             onClick={() => setClick1((prevState) => !prevState)}
             onKeyDown={() => setClick1((prevState) => !prevState)}
@@ -80,6 +83,9 @@ const Section = () => {
             </div>
           </div>
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="card"
             className="label"
             onClick={() => setClick2((prevState) => !prevState)}
             onKeyDown={() => setClick2((prevState) => !prevState)}
@@ -98,6 +104,9 @@ const Section = () => {
             </div>
           </div>
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="card"
             className="label"
             onClick={() => setClick3((prevState) => !prevState)}
             onKeyDown={() => setClick3((prevState) => !prevState)}
@@ -120,6 +129,9 @@ const Section = () => {
             </div>
           </div>
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="card"
             className="label"
             onClick={() => setClick4((prevState) => !prevState)}
             onKeyDown={() => setClick4((prevState) => !prevState)}
@@ -140,6 +152,9 @@ const Section = () => {
             </div>
           </div>
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="card"
             className="label"
             onClick={() => setClick5((prevState) => !prevState)}
             onKeyDown={() => setClick5((prevState) => !prevState)}
@@ -163,7 +178,9 @@ const Section = () => {
         </div>
       </section>
       <button className="next" aria-label="control">
-        <Link to={`/page${page + 1}/`} aria-label="link">next▶︎</Link>
+        <Link to={`/page${page + 1}/`} aria-label="link">
+          next▶︎
+        </Link>
       </button>
     </>
   );

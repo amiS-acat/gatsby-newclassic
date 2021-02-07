@@ -219,16 +219,24 @@ const Section = () => {
               style={{ zIndex: card === 0 ? "0" : "-1" }}
             />
             <div
+              role="button"
+              tabIndex={0}
+              aria-label="next"
               className={
                 card === 0
                   ? "card card-top--0 card--right card--control"
                   : "card card--right card--control"
               }
               onClick={() => (card === 7 ? setCard(0) : setCard(card + 1))}
+              onKeyDown={() => (card === 7 ? setCard(0) : setCard(card + 1))}
             />
             <div
+              role="button"
+              tabIndex={0}
+              aria-label="prev"
               className={"card card--open card--control"}
               onClick={() => (card === 0 ? "" : setCard(card - 1))}
+              onKeyDown={() => (card === 0 ? "" : setCard(card - 1))}
             />
           </div>
         </div>

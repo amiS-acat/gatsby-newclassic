@@ -53,13 +53,16 @@ const Header = () => {
         </div>
       </header>
       <div className="header__under"></div>
-      <nav
+      <div
+        role="button"
+        tabIndex={0}
+        aria-label="menu"
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
         onClick={() => setMobileClick((prevState) => !prevState)}
         onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
         <InnreLink />
-      </nav>
+      </div>
     </>
   );
 };
