@@ -20,17 +20,6 @@ module.exports = {
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-netlify`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   option: {
-    //     name: `newclassic`,
-    //     start_url: `/`,
-    //     background_color: '#ffffff',
-    //     thema_color: `#710000`,
-    //     display: `standalone`,
-    //     icon: `static/images/favicon.png`
-    //   },
-    // },
     `gatsby-plugin-offline`,
   ],
 }
