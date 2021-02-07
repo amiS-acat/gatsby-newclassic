@@ -19,7 +19,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   option: {
@@ -31,17 +31,6 @@ module.exports = {
     //     icon: `static/images/favicon.png`
     //   },
     // },
-    // `gatsby-plugin-offline`,
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [`gatsby-remark-responsive-iframe`],
-    //     commonmark: true,
-    //     footnotes: true,
-    //     pedantic: true,
-    //     gfm: true,
-    //     plugins: [],
-    //   },
-    // },
+    `gatsby-plugin-offline`,
   ],
 }
