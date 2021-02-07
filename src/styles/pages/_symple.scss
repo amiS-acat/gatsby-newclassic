@@ -174,7 +174,13 @@
     transform: scale(6.3);
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 777px) {
+    .sp-display-none{
+      display: none;
+    }
+    .display-flex-block{
+      display: block;
+    }
     .textBox {
       text-align: center;
     }
@@ -196,6 +202,9 @@
     }
     .font--mini {
       font-size: 2vw;
+    }
+    .label {
+      width: 100%;;
     }
   }
 }

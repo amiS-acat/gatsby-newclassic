@@ -73,6 +73,11 @@ const Section = () => {
                 <br className="sp-display-none" />
                 <br />
                 01:51
+                <div style={{ textAlign: "left" }}>
+                  ドビュッシーが溺愛していた娘シュシュに捧げられた曲です。
+                  <br />
+                  クレメンティの練習曲集が題材となっているので無味乾燥な練習曲をいやいややっている子供を連想しますが、この曲は子供の自由さやいい加減さをドビュッシーの巧みな技術で表現されています。
+                </div>
               </div>
             </div>
             <div className={click1 ? "label-img" : "label-img-0"}>
@@ -92,6 +97,13 @@ const Section = () => {
                 <br className="sp-display-none" />
                 <br />
                 04:56
+                <div style={{ textAlign: "left" }}>
+                  当初のタイトルは「感傷的な散歩道」だったが後にこの題になった。
+                  <br />
+                  甘く切ないメロディーの夜想曲である。
+                  <br />
+                  映画オーシャンズ11のラストシーンにも使われた。
+                </div>
               </div>
             </div>
             <div className={click2 ? "label-img" : "label-img-0"}>
@@ -115,6 +127,13 @@ const Section = () => {
                 <br className="sp-display-none" />
                 <br />
                 03:09
+                <div style={{ textAlign: "left" }}>
+                  この曲は同名のフランスの詩から着想を得たとも言われている。
+                  <br />
+                  主人公は乙女に恋をしたが結局気持ちを伝えず去る。
+                  <br />
+                  生ぬるく夢見心地で満たされない詩人の想いが表現されている。
+                </div>
               </div>
             </div>
             <div className={click3 ? "label-img" : "label-img-0"}>
@@ -136,6 +155,11 @@ const Section = () => {
                 <br className="sp-display-none" />
                 <br />
                 04:24
+                <div style={{ textAlign: "left" }}>
+                  この曲の旋律の絡み合った感じからアラベスク模様をイメージして作られたと言われています。
+                  <br />
+                  不思議な雰囲気と川が流れるような滑らかなメロディーが特徴です。
+                </div>
               </div>
             </div>
             <div className={click4 ? "label-img" : "label-img-0"}>
@@ -158,6 +182,11 @@ const Section = () => {
                 <br className="sp-display-none" />
                 <br />
                 04:21
+                <div style={{ textAlign: "left" }}>
+                  ゴリウォーグはイギリスの児童文学者が発表した黒人のキャラクターで、ケークウォークとはアメリカの黒人の間で誕生した踊りです。
+                  <br />
+                  軽快なステップとぎこちないリズムが面白み出している。
+                </div>
               </div>
             </div>
             <div className={click5 ? "label-img" : "label-img-0"}>
