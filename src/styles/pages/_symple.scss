@@ -121,7 +121,7 @@
   .label {
     position: relative;
     flex: 1;
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
@@ -182,13 +182,13 @@
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    top: -17px;
-    left: 296px;
+    top: -6px;
+    left: 701px;
     z-index: 5;
     height: 66px;
-    transform: scale(3.3);
+    transform: scale(6.3);
   }
-  
+
   @media screen and (max-width: 600px) {
     .textBox {
       text-align: center;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import gif from "../../../frontmatter/gif/name.gif";
+import movie from "../../../frontmatter/movie/name.mp4";
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header__inner">
         <div className="icon">
           <Link to="/" aria-label="go home">
-            <img src={gif} style={{ width: "150px" }} alt="namegif" />
+            <video className="name-icon--video" muted src={movie} autoPlay playsInline></video>
           </Link>
         </div>
       </div>
