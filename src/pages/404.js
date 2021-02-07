@@ -5,6 +5,8 @@ import Img from "gatsby-image";
 import Header from "../components/header";
 
 import SEO from "../components/seo";
+import "../styles/_destyle.css"
+import "../styles/style.scss"
 
 const notFound = ({ data }) => {
   return (
