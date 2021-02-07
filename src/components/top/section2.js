@@ -104,7 +104,7 @@ const Section = () => {
                     <h2 className="h2">web</h2>
                   </div>
                   <button aria-label="page">
-                    <Link href={node.frontmatter.slug} aria-label="page-link">
+                    <Link to={node.frontmatter.slug} aria-label="page-link">
                       <div className="pc">
                         <Img fluid={data.pc.childImageSharp.fluid} />
                         <div className="scroll-container pc_inner">

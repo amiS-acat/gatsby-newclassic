@@ -218,9 +218,7 @@ const Section = () => {
               fluid={data.card.childImageSharp.fluid}
               style={{ zIndex: card === 0 ? "0" : "-1" }}
             />
-            <div
-              role="button"
-              tabIndex={0}
+            <button
               aria-label="next"
               className={
                 card === 0
@@ -230,9 +228,7 @@ const Section = () => {
               onClick={() => (card === 7 ? setCard(0) : setCard(card + 1))}
               onKeyDown={() => (card === 7 ? setCard(0) : setCard(card + 1))}
             />
-            <div
-              role="button"
-              tabIndex={0}
+            <button
               aria-label="prev"
               className={"card card--open card--control"}
               onClick={() => (card === 0 ? "" : setCard(card - 1))}

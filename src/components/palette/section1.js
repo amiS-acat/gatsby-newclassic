@@ -96,58 +96,58 @@ const Section = () => {
           <section className="page-container">
             {page === 1 ? (
               <>
-                <div
+                <button
                   id="a01"
                   className="page__top"
                   style={{ backgroundColor: "#d2d6d8" }}
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text" aria-label="close">
+                  <div className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
-                  </button>
-                </div>
+                  </div>
+                </button>
                 <Page1 />
               </>
             ) : page === 2 ? (
               <>
-                <div
+                <button
                   className="page__top"
                   style={{ backgroundColor: "#BAAEC1" }}
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text" aria-label="close">
+                  <div className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
-                  </button>
-                </div>
+                  </div>
+                </button>
                 <Page2 />
               </>
             ) : page === 3 ? (
               <>
-                <div
+                <button
                   className="page__top"
                   style={{ backgroundColor: "#239096" }}
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text" aria-label="close">
+                  <div className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
-                  </button>
-                </div>
+                  </div>
+                </button>
                 <Page3 />
               </>
             ) : page === 4 ? (
               <>
-                <div
+                <button
                   className="page__top"
                   style={{ backgroundColor: "#E5DFBF" }}
                   id="a01"
                   onClick={() => setPage(0)}
                 >
-                  <button className="page__text" aria-label="close">
+                  <div className="page__text" aria-label="close">
                     close <div className="text--cross">×</div>
-                  </button>
-                </div>
+                  </div>
+                </button>
                 <Page4 />
               </>
             ) : (
@@ -158,9 +158,9 @@ const Section = () => {
       ) : (
         ""
       )}
-      <button className="prev" aria-label="control">
+      <div className="prev">
         <Link to={`/page${pageNumber - 1}/`} aria-label="link">◀︎ prev</Link>
-      </button>
+      </div>
     </>
   );
 };

@@ -57,9 +57,7 @@ const Section = () => {
     <>
       <section style={{ margin: "2% 0" }}>
         <div className="display-flex-block">
-          <div
-            role="button"
-            tabIndex={0}
+          <button
             aria-label="menu"
             className="label"
             onClick={() => setClick1((prevState) => !prevState)}
@@ -81,10 +79,8 @@ const Section = () => {
               <Img fluid={data.green_toll.childImageSharp.fluid} />
               <div className="white-text">Doctor　Gradus　ad　Parnassum</div>
             </div>
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
+          </button>
+          <button
             aria-label="card"
             className="label"
             onClick={() => setClick2((prevState) => !prevState)}
@@ -102,10 +98,8 @@ const Section = () => {
               <Img fluid={data.moonlight_toll.childImageSharp.fluid} />
               <div className="white-text">Moonlight</div>
             </div>
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
+          </button>
+          <button
             aria-label="card"
             className="label"
             onClick={() => setClick3((prevState) => !prevState)}
@@ -127,10 +121,8 @@ const Section = () => {
               <Img fluid={data.lafiile_toll.childImageSharp.fluid} />
               <div className="white-text">La　fille　aux　cheveux　de　lin</div>
             </div>
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
+          </button>
+          <button
             aria-label="card"
             className="label"
             onClick={() => setClick4((prevState) => !prevState)}
@@ -150,10 +142,8 @@ const Section = () => {
               <Img fluid={data.pink_toll.childImageSharp.fluid} />
               <div className="white-text">Arabesque No. 1</div>
             </div>
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
+          </button>
+          <button
             aria-label="card"
             className="label"
             onClick={() => setClick5((prevState) => !prevState)}
@@ -174,7 +164,7 @@ const Section = () => {
               <Img fluid={data.walk_toll.childImageSharp.fluid} />
               <div className="white-text">Golliwog's Cakewalk</div>
             </div>
-          </div>
+          </button>
         </div>
       </section>
       <button className="next" aria-label="control">

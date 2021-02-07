@@ -61,7 +61,9 @@ const Section = () => {
             className="record-button"
             aria-label="play"
           >
-            <audio controls src={Music} />
+            <audio controls src={Music}>
+              <track kind="captions" />
+            </audio>
             <Img fluid={data.record.childImageSharp.fluid} />
             <Img
               className={play ? "stylus" : "stylus stylus--stop"}
@@ -102,15 +104,16 @@ const Section = () => {
           </div>
         </div>
       </div>
-      <div
+      <button
+        aria-label="control"
         onClick={() => scrollTo("#a01")}
         className="page__bottom"
         style={{ backgroundColor: "#534D61" }}
       >
-        <button className="page__text" aria-label="control">
+        <div className="page__text">
           top <span className="text--arrow">⬆︎</span>
-        </button>
-      </div>
+        </div>
+      </button>
     </>
   );
 };

@@ -43,15 +43,16 @@ const Header = () => {
         </div>
       </header>
       <div className="header__under"></div>
-      <nav
+      <button
         className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
         onClick={() => setMobileClick((prevState) => !prevState)}
         onKeyDown={() => setMobileClick((prevState) => !prevState)}
       >
         <ul>
+          <li><Link to="/">Home</Link></li>
           <InnreLink />
         </ul>
-      </nav>
+      </button>
     </>
   );
 };

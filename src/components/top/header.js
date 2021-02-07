@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-import InnreLink from "../innerLink";
-
 const Header = () => {
-  const [mobileClick, setMobileClick] = useState(false);
-
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "images/logo/icon1.png" }) {
@@ -22,17 +18,11 @@ const Header = () => {
 
   return (
     <>
-      <header className={mobileClick ? "header-open" : "header"}>
+      <header className="header">
         <div className="header__inner">
-          {mobileClick ? (
-            <div className="icon">
-              <Img fixed={data.file.childImageSharp.fixed} alt="" />
-            </div>
-          ) : (
-            <Link to="/" className="icon" aria-label="go home">
-              <Img fixed={data.file.childImageSharp.fixed} alt="" />
-            </Link>
-          )}
+          <Link to="/" className="icon" aria-label="go home">
+            <Img fixed={data.file.childImageSharp.fixed} alt="" />
+          </Link>
           <div className="headerNavi-btn">
             <button
               onClick={() => scrollTo("#a01")}
@@ -53,16 +43,6 @@ const Header = () => {
         </div>
       </header>
       <div className="header__under"></div>
-      <div
-        role="button"
-        tabIndex={0}
-        aria-label="menu"
-        className={mobileClick ? "mobile-menu-open" : "mobile-menu"}
-        onClick={() => setMobileClick((prevState) => !prevState)}
-        onKeyDown={() => setMobileClick((prevState) => !prevState)}
-      >
-        <InnreLink />
-      </div>
     </>
   );
 };

@@ -59,26 +59,36 @@ const Section = () => {
       </h1>
       <section className="display-flex-inline-block text-align-center">
         <button className="mini-sircle" aria-label="music">
-          <audio controls src={Doctor} />
+          <audio controls src={Doctor}>
+            <track kind="captions" />
+          </audio>
           <Img className="sircle" fluid={data.green.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <audio controls src={Moonlight} />
+          <audio controls src={Moonlight}>
+            <track kind="captions" />
+          </audio>
           <Img
             className="sircle"
             fluid={data.moonlight.childImageSharp.fluid}
           />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <audio controls src={LaFiile} />
+          <audio controls src={LaFiile}>
+            <track kind="captions" />
+          </audio>
           <Img className="sircle" fluid={data.lafiile.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <audio controls src={Arabesque} />
+          <audio controls src={Arabesque}>
+            <track kind="captions" />
+          </audio>
           <Img className="sircle" fluid={data.pink.childImageSharp.fluid} />
         </button>
         <button className="mini-sircle" aria-label="music">
-          <audio controls src={Golliwog} />
+          <audio controls src={Golliwog}>
+            <track kind="captions" />
+          </audio>
           <Img className="sircle" fluid={data.walk.childImageSharp.fluid} />
         </button>
       </section>

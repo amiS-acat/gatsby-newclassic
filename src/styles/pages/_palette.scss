@@ -80,11 +80,6 @@
     }
   }
 
-  .page-top {
-    width: 100%;
-    height: 192px;
-  }
-
   .page {
     position: fixed;
     z-index: 100;
@@ -108,7 +103,7 @@
 
   .page__top {
     width: 100%;
-    height: 90px;
+    height: 80px;
   }
 
   .palette {
@@ -192,14 +187,14 @@
     font-size: 18px;
     width: 90%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 42px;
   }
   .note {
     font-size: 2vw;
     border: 1px solid #cdcdcd;
     width: 90%;
     margin: auto;
-    padding-top: 18%;
+    padding-top: 16%;
   }
 
   .note-en {
@@ -210,13 +205,11 @@
   .img--ink {
     width: 46%;
     margin: auto;
-    margin-top: 10%;
   }
 
   .note-ja {
     position: relative;
-    margin-top: 17%;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
     padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 20%;
@@ -237,16 +230,17 @@
 
   .page__bottom {
     width: 100%;
-    height: 100px;
+    height: 80px;
     margin-top: 30px;
   }
 
   .page__text {
     display: block;
     margin: auto;
-    padding-top: 25px;
+    padding-top: 5px;
     color: $cWhite;
     font-size: 32px;
+    text-align: center;
   }
 
   .text--cross,

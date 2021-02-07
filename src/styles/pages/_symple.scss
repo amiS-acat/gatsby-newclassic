@@ -121,6 +121,9 @@
   .label {
     position: relative;
     flex: 1;
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .label-img {
