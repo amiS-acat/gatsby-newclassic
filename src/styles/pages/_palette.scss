@@ -90,7 +90,7 @@
     z-index: 100;
     top: 0;
     left: 0;
-    background-color: $cWhite;
+    background-color: #eeefeb;
     width: 100%;
     height: 100%;
   }
@@ -100,6 +100,10 @@
     overflow-x: auto;
     width: 100%;
     height: 100%;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #cccccc;
+    background: white;
   }
 
   .page__top {
@@ -108,7 +112,7 @@
   }
 
   .palette {
-    margin-top: 120px;
+    margin-top: 40px;
   }
 
   .palette-text {
@@ -128,7 +132,6 @@
 
   .record-container {
     margin: auto;
-    margin-top: 150px;
     width: 60%;
   }
 
@@ -189,7 +192,7 @@
     font-size: 18px;
     width: 90%;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 20px;
   }
   .note {
     font-size: 2vw;
@@ -235,7 +238,7 @@
   .page__bottom {
     width: 100%;
     height: 100px;
-    margin-top: 140px;
+    margin-top: 30px;
   }
 
   .page__text {
@@ -264,9 +267,12 @@
     left: 1289px;
     z-index: 10;
     opacity: 0;
-    &:hover{
-      opacity: 0.6;
-    }
+  }
+
+  .play-text{
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 0 0 0;
   }
 
   @media screen and (max-width: 600px) {

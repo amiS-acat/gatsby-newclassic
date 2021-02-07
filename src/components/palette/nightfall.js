@@ -54,6 +54,7 @@ const Section = () => {
     <>
       <div className="content-width">
         <Img className="palette" fluid={data.FV.childImageSharp.fluid} />
+        <p className="play-text">Click to play !</p>
         <div className="record-container">
           <button
             onClick={() => setPlay((prevState) => !prevState)}
