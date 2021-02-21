@@ -7,7 +7,7 @@ const Section = () => {
     {
       greffes: file(relativePath: { eq: "images/photo/greffes 2.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

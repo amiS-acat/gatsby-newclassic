@@ -12,35 +12,35 @@ const Section = () => {
     {
       FV: file(relativePath: { eq: "images/picture/palette--clouds.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       record: file(relativePath: { eq: "images/picture/record--purple.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       stylus: file(relativePath: { eq: "images/picture/stylus.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       ink: file(relativePath: { eq: "images/picture/ink.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       note: file(relativePath: { eq: "images/picture/note--green.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

@@ -16,28 +16,28 @@ const Section = () => {
     {
       peacock: file(relativePath: { eq: "images/picture/whitePeacock.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       nightfall: file(relativePath: { eq: "images/picture/nightfall.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       acqua: file(relativePath: { eq: "images/picture/acqua.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       clouds: file(relativePath: { eq: "images/picture/clouds.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

@@ -7,7 +7,7 @@ import Header from "./header";
 const Section = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { frontmatter: { number: { eq: 1 } } }) {
+      allMarkdownRemark(filter: { frontmatter: { number: { eq: 2 } } }) {
         edges {
           node {
             frontmatter {
@@ -80,13 +80,6 @@ const Section = () => {
           }
         }
       }
-      photos: file(relativePath: { eq: "images/picture/photos.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
     }
   `);
 
@@ -101,7 +94,14 @@ const Section = () => {
             <div className="content-width">
               <Header>{node.frontmatter.title}</Header>
             </div>
-            <div className="scroll-container" style={{ overflowY: "hidden" }}>
+            <div
+              className="scroll-container"
+              style={{
+                overflowY: "hidden",
+                padding: "30px 0 20px",
+                backgroundColor: "#eeeeee",
+              }}
+            >
               <div className="content-width display-flex">
                 <div className="position-relative height-fit">
                   <div>
@@ -184,9 +184,6 @@ const Section = () => {
             </div>
           </div>
         ))}
-        <div className="top-pictures">
-          <Img fluid={data.photos.childImageSharp.fluid} />
-        </div>
       </section>
     </>
   );

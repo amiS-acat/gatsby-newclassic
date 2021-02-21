@@ -7,14 +7,14 @@ const Footer = () => {
     {
       logo: file(relativePath: { eq: "images/logo/icon.png" }) {
         childImageSharp {
-          fixed(width: 32) {
+          fixed(width: 32, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }
       name: file(relativePath: { eq: "images/logo/name.png" }) {
         childImageSharp {
-          fixed(width: 50) {
+          fixed(width: 50, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }

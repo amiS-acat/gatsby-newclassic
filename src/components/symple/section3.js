@@ -15,7 +15,7 @@ const Section = () => {
     {
       green_toll: file(relativePath: { eq: "images/picture/green.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 300) {
+          fluid(maxWidth: 100, maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
@@ -24,28 +24,28 @@ const Section = () => {
         relativePath: { eq: "images/picture/moonlight.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 300) {
+          fluid(maxWidth: 100, maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       lafiile_toll: file(relativePath: { eq: "images/picture/lafiile.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 300) {
+          fluid(maxWidth: 100, maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       pink_toll: file(relativePath: { eq: "images/picture/pink.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 300) {
+          fluid(maxWidth: 100, maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       walk_toll: file(relativePath: { eq: "images/picture/walk.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 300) {
+          fluid(maxWidth: 100, maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

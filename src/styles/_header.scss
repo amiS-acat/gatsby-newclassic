@@ -23,7 +23,7 @@ header {
   &__inner {
     display: flex;
     justify-content: space-between;
-    height: 90px;
+    height: $headerHeight;
     @extend .content-width;
   }
   &__under {
@@ -51,7 +51,7 @@ header {
   &__inner {
     display: flex;
     justify-content: space-between;
-    height: 90px;
+    height: $headerHeight;
     @extend .content-width;
   }
   & button {
@@ -61,7 +61,7 @@ header {
       display: block;
       margin-bottom: 9px;
       transition: transform 0.7s;
-      background-color: lightgray;
+      background-color: $cLightgray;
       &:nth-child(1) {
         transform: translateY(11px) rotate(135deg);
       }
@@ -91,7 +91,7 @@ header {
     & li {
       padding: 20px 0;
       & a {
-        color: lightgray;
+        color: $cLightgray;
         &:hover {
           color: gray;
         }

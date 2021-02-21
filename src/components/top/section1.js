@@ -9,14 +9,7 @@ const Section = () => {
     {
       card: file(relativePath: { eq: "images/picture/card.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
-      card_name: file(relativePath: { eq: "images/picture/card--name.png" }) {
-        childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
@@ -25,56 +18,49 @@ const Section = () => {
         relativePath: { eq: "images/picture/card--favorite.png" }
       ) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
-      card_prof: file(relativePath: { eq: "images/picture/card--prof.png" }) {
-        childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_piano: file(relativePath: { eq: "images/picture/card--piano.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_cat: file(relativePath: { eq: "images/picture/card--cat.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_food: file(relativePath: { eq: "images/picture/card--food.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_sea: file(relativePath: { eq: "images/picture/card--sea.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_color: file(relativePath: { eq: "images/picture/card--color.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       card_tea: file(relativePath: { eq: "images/picture/card--tea.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
@@ -85,9 +71,6 @@ const Section = () => {
   return (
     <>
       <div className="scroll-top" id="a01"></div>
-      <div className="content-width">
-        <h1 className="h1">Profile</h1>
-      </div>
       <section className="card-container">
         <div
           className={
@@ -109,16 +92,6 @@ const Section = () => {
                   ? "card card--left card--open card--left--open"
                   : "card card--none"
               }
-              fluid={data.card_name.childImageSharp.fluid}
-            />
-            <Img
-              className={
-                card === 0
-                  ? "card card--0 card--none"
-                  : card >= 2
-                  ? "card card--left card--open card--left--open"
-                  : "card card--none"
-              }
               fluid={data.card_favorite.childImageSharp.fluid}
             />
             <Img
@@ -126,9 +99,9 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 7
+                  : card === 6
                   ? "card card--right"
-                  : card === 8
+                  : card === 7
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -139,9 +112,9 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 6
+                  : card === 5
                   ? "card card--right"
-                  : card === 7
+                  : card === 6
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -152,9 +125,9 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 5
+                  : card === 4
                   ? "card card--right"
-                  : card === 6
+                  : card === 5
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -165,9 +138,9 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 4
+                  : card === 3
                   ? "card card--right"
-                  : card === 5
+                  : card === 4
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -178,9 +151,9 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 3
+                  : card === 2
                   ? "card card--right"
-                  : card === 4
+                  : card === 3
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
@@ -191,26 +164,13 @@ const Section = () => {
               className={
                 card === 0
                   ? "card card--0 card--none"
-                  : card === 2
-                  ? "card card--right"
-                  : card === 3
-                  ? "card card--right card--open card--none"
-                  : "card card--none"
-              }
-              fluid={data.card_piano.childImageSharp.fluid}
-            />
-            <Img
-              alt="prof"
-              className={
-                card === 0
-                  ? "card card--0 card--none"
                   : card === 1
                   ? "card card--right"
                   : card === 2
                   ? "card card--right card--open card--none"
                   : "card card--none"
               }
-              fluid={data.card_prof.childImageSharp.fluid}
+              fluid={data.card_piano.childImageSharp.fluid}
             />
             <Img
               alt="top"
@@ -225,8 +185,8 @@ const Section = () => {
                   ? "card card-top--0 card--right card--control"
                   : "card card--right card--control"
               }
-              onClick={() => (card === 7 ? setCard(0) : setCard(card + 1))}
-              onKeyDown={() => (card === 7 ? setCard(0) : setCard(card + 1))}
+              onClick={() => (card === 6 ? setCard(0) : setCard(card + 1))}
+              onKeyDown={() => (card === 6 ? setCard(0) : setCard(card + 1))}
             />
             <button
               aria-label="prev"

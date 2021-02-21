@@ -11,7 +11,7 @@ const Header = () => {
     query {
       file(relativePath: { eq: "images/logo/icon1.png" }) {
         childImageSharp {
-          fixed(width: 50) {
+          fixed(width: 50, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }

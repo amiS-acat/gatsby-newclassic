@@ -1,4 +1,6 @@
 .top-content {
+  $headerHeight: 54px;
+
   .scroll-top {
     margin-top: -$headerHeight;
     height: $headerHeight;
@@ -14,7 +16,7 @@
     margin-bottom: 20px;
   }
 
-  h2{
+  h2 {
     font-weight: 100;
   }
 
@@ -75,26 +77,41 @@
     }
   }
 
-  .icon {
-    margin: auto 0;
+  .header {
+    position: relative;
+    height: $headerHeight;
+    border-bottom: 4px solid #d8d8d8;
+    color: $cDarkgray;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__under {
+    height: 0;
+  }
+
+  .myPhoto {
+    position: absolute !important;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   .FV {
-    text-align: center;
-    padding: 210px 0 170px;
     width: 100%;
+    padding: 43% 0 5.5%;
   }
 
   .FV_inner {
     position: relative;
-    width: fit-content;
-    margin: auto;
   }
 
   .name {
     position: absolute !important;
-    top: -24px;
-    left: -51px;
+    bottom: 0%;
+    right: 5%;
+    width: 23%;
   }
   .name_A {
     animation: 4.5s ease infinite pendulum;
@@ -103,14 +120,20 @@
     animation: 4.5s normal infinite purupuru;
   }
 
-  .title {
-    text-align: center;
+  .profile {
+    width: 50%;
+    min-width: 260px;
+    margin: 6% 4% 28.5% auto;
+    color: $cDarkgray;
+    font-size: 1.5vw;
+    font-weight: bold;
   }
 
   .card-container {
     width: 100%;
-    height: 342px;
-    background-color: #f1f1f1;
+    height: 380px;
+    background-color: $cWhite;
+    border-bottom: 4px solid #d8d8d8;
   }
 
   .card-container__inner {
@@ -118,7 +141,7 @@
     margin: auto;
     width: 359px;
     max-width: 90%;
-    padding-top: 13px;
+    padding-top: 50px;
     transition: 1s;
   }
 
@@ -153,7 +176,7 @@
     width: 50% !important;
   }
 
-  .card--0{
+  .card--0 {
     left: 60%;
   }
 
@@ -180,6 +203,19 @@
     height: 283.5px;
   }
 
+  .top-pictures {
+    width: 80%;
+    margin: 60px auto 40px;
+    .gatsby-image-wrapper {
+      margin: 20px 0;
+    }
+  }
+
+  .scroll-container {
+    padding: 30px 0;
+    background-color: #efefef;
+  }
+
   .display-parts {
     position: absolute !important;
     z-index: 10;
@@ -191,14 +227,16 @@
   }
 
   .pc--bottom {
+    width: 451px;
     bottom: -24.5%;
   }
 
   .pc_inner {
     position: absolute !important;
-    margin: 6%;
-    height: 90%;
+    margin: 5.5%;
+    height: 86%;
     top: 0;
+    padding: 0;
   }
 
   .ipad {
@@ -212,6 +250,7 @@
     top: 35px;
     left: 19px;
     height: 265px;
+    padding: 0;
   }
 
   .sp {
@@ -220,28 +259,24 @@
 
   .sp_inner {
     position: absolute;
-    top: 18px;
+    top: 4px;
     left: 18px;
-    height: 310px;
+    height: 323px;
     border-radius: 15px;
+    padding: 0;
   }
 
   .footer {
-    background-color: #fbfbfb;
+    background-color: $cWhite;
+    padding: 20px;
+    .gatsby-image-wrapper{
+      display: block !important;
+      margin: auto;
+    }
   }
 
   @media screen and (max-width: 600px) {
-    .FV {
-      padding: 100px 0;
-    }
-
-    .title {
-      padding: 0;
-      text-align: center;
-    }
-
     .card-container {
-      height: 80vw;
       max-height: 342px;
     }
 
@@ -263,6 +298,15 @@
   @media screen and (max-width: 450px) {
     .pc--bottom {
       bottom: -20%;
+    }
+    .profile{
+      margin: 5px 0 10px ;
+    }
+  }
+  @media screen and (min-width: $maxWidth) {
+    .profile{
+      margin: 60px 40px 285px 460px;
+      font-size: 16px;
     }
   }
 }

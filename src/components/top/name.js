@@ -7,22 +7,22 @@ const Section = () => {
     {
       A: file(relativePath: { eq: "images/logo/name_a.png" }) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       m: file(relativePath: { eq: "images/logo/name_m.png" }) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       i: file(relativePath: { eq: "images/logo/name_i.png" }) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -31,9 +31,9 @@ const Section = () => {
   return (
     <div className="FV">
       <div className="FV_inner">
-        <Img className="name name_A" fixed={data.A.childImageSharp.fixed} />
-        <Img className="name name_m" fixed={data.m.childImageSharp.fixed} />
-        <Img className="name" fixed={data.i.childImageSharp.fixed} />
+        <Img className="name name_A" fluid={data.A.childImageSharp.fluid} />
+        <Img className="name name_m" fluid={data.m.childImageSharp.fluid} />
+        <Img className="name" fluid={data.i.childImageSharp.fluid} />
       </div>
     </div>
   );
