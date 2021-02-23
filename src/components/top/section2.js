@@ -151,7 +151,7 @@ const Section = () => {
                     </Link>
                   </button>
                 </div>
-                <div>
+                <div className="sp-container">
                   <button
                     className="position-relative height-fit"
                     style={{ paddingRight: "120px", padding: "0" }}
