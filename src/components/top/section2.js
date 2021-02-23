@@ -99,7 +99,10 @@ const Section = () => {
         {posts.map(({ node }) => (
           <div key={node.frontmatter.slug}>
             <div className="content-width">
-              <Header>{node.frontmatter.title} ~印象派の作曲家Debussyの作品を紹介するページ</Header>
+              <Header>
+                {node.frontmatter.title}{" "}
+                ~印象派の作曲家Debussyの作品を紹介するページ
+              </Header>
             </div>
             <div className="scroll-container" style={{ overflowY: "hidden" }}>
               <div className="content-width display-flex">
@@ -184,8 +187,10 @@ const Section = () => {
             </div>
           </div>
         ))}
-        <div className="top-pictures">
-          <Img fluid={data.photos.childImageSharp.fluid} />
+        <div className="content-width">
+          <div className="top-pictures">
+            <Img fluid={data.photos.childImageSharp.fluid} />
+          </div>
         </div>
       </section>
     </>

@@ -43,8 +43,8 @@ const Page = () => {
       <div className="content-width">
         <Header>My Favorite</Header>
         <Section1 />
+        <Pictures1 />
       </div>
-      <Pictures1 />
       <Section2 />
       <Section2_5 />
       <div className="content-width">
