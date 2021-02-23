@@ -92,7 +92,7 @@ const Section = () => {
         {posts.map(({ node }) => (
           <div key={node.frontmatter.slug}>
             <div className="content-width">
-              <Header>{node.frontmatter.title}</Header>
+              <Header>{node.frontmatter.title} ~印象派の作曲家Griffesの作品を紹介するページ</Header>
             </div>
             <div
               className="scroll-container"
