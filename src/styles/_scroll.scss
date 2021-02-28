@@ -1,0 +1,10 @@
+.scrollAnime--item {
+  opacity: 0;
+  transition: 1s;
+  transform: translate(0, 80px);
+}
+.is-animated {
+  opacity: 1;
+  transition: 1s;
+  transform: translate3d(0, 0, 0);
+}

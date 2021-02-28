@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
@@ -89,6 +89,22 @@ const Section = () => {
       }
     }
   `);
+
+  useEffect(() => {
+    let targets = document.querySelectorAll(".scrollAnime--item");
+
+    window.addEventListener("scroll", function () {
+      var scroll = window.scrollY;
+      var h = window.innerHeight;
+
+      for (let target of targets) {
+        var pos = target.getBoundingClientRect().top + scroll;
+        if (scroll > pos - h) {
+          target.classList.add("is-animated");
+        }
+      }
+    });
+  });
 
   const posts = data.allMarkdownRemark.edges;
 
@@ -189,7 +205,10 @@ const Section = () => {
         ))}
         <div className="content-width">
           <div className="top-pictures">
-            <Img fluid={data.photos.childImageSharp.fluid} />
+            <Img
+              className="scrollAnime--item"
+              fluid={data.photos.childImageSharp.fluid}
+            />
           </div>
         </div>
       </section>
