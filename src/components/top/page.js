@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 
+import Menu from "./menu";
 import Header from "./header";
 import Footer from "./footer";
 import Name from "./name";
@@ -27,22 +28,27 @@ const Page = () => {
 
   return (
     <div className="top-content">
+      <Menu />
       <div style={{ width: "100%", height: "70px" }}></div>
+      <div id="t1"></div>
       <Header>
         <div className="content-width">Ami Sawai</div>
       </Header>
-      <div
-        className="content-width"
-        style={{ position: "relative", background: "#efefef", zIndex: "0" }}
-      >
+      <div style={{ position: "relative", background: "#efefef", zIndex: "0" }}>
         <Img className="myPhoto" fluid={data.file.childImageSharp.fluid} />
         <Name />
-        <Header>Profile</Header>
+        <div id="t2"></div>
+        <Header>
+          <div className="content-width">Profile</div>
+        </Header>
         <Section0 />
       </div>
+      <div id="t3"></div>
+      <Header>
+        <div className="content-width">My Favorite</div>
+      </Header>
+      <Section1 />
       <div className="content-width">
-        <Header>My Favorite</Header>
-        <Section1 />
         <Pictures1 />
       </div>
       <Section2 />
